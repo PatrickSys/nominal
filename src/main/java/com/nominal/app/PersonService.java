@@ -34,6 +34,7 @@ public class PersonService implements PersonRepo {
         return jdbcTemplate.query("select * from people", new PersonMapper());
     }
 
+/*
     //TODO Fix this method. Get returns error
     @Override
     public Person getPersonByDni(String dni){
@@ -47,6 +48,21 @@ public class PersonService implements PersonRepo {
 
 
         }
+
+*/
+
+    //TODO
+    @Override
+    public Person getPersonByDni(String dni){
+
+        StringBuilder query = new StringBuilder();
+        String sql = "select * from people where dni = " + dni;
+        query.append(sql);
+
+        return jdbcTemplate.queryForObject( query.toString(), new BeanPropertyRowMapper<Person>(Person.class));
+
+
+    }
 
 
     @Override

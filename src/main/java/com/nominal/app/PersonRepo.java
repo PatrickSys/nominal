@@ -1,5 +1,7 @@
 package com.nominal.app;
 
+import org.springframework.stereotype.Repository;
+
 import java.util.List;
 
 /************************************************************************
@@ -8,6 +10,8 @@ import java.util.List;
  Package        service
  Description:
  ************************************************************************/
+
+@Repository
 public interface PersonRepo {
 
 
