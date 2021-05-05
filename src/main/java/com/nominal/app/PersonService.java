@@ -82,12 +82,12 @@ public class PersonService implements PersonRepo {
 
         System.out.println(person);
 
-        String query = "insert into people (dni, yob, name, second_name, last_name, phone, email values (\"" + person.getDni() + "\", \"" + person.getYob() + "\", " +
-                "\"" + person.getName() + "\", \"" + person.getSecondName() + "\", \"" + person.getLastName() + "\", \" " + person.getPhone() + "\", \"" + person.getEmail() + "\"";
+        String query = "insert into people (dni, yob, name, second_name, last_name, phone, email) values (\"" + person.getDni() + "\", " + person.getYob() + " , " +
+                "\"" + person.getName() + "\", \"" + person.getSecondName() + "\", \"" + person.getLastName() + "\",  " + person.getPhone() + ", \"" + person.getEmail() + "\")";
 
-        ResultSet resultSet = queries.query("insert into people(dni, yob, name, second_name, last_name, phone, email) values(%s,%d,%s,%s,%s,%d,%s)");
+        //ResultSet resultSet = queries.query("insert into people(dni, yob, name, second_name, last_name, phone, email) values(%s,%d,%s,%s,%s,%d,%s)");
 
-
+        System.out.println(query);
 
 
         return mapper.mapRow(queries.query(query));

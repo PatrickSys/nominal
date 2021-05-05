@@ -42,8 +42,9 @@ public class PersonController {
     }
 
     @PostMapping("/add")
-    public ResponseEntity<Person> addPerson(@RequestBody Person person){
-        return new ResponseEntity<>(person, HttpStatus.CREATED);
+    public ResponseEntity<Person> addPerson(@RequestBody Person person) throws SQLException {
+        Person addPerson = personService.addPerson(person);
+        return new ResponseEntity<>(addPerson, HttpStatus.CREATED);
     }
 
     @PutMapping("/update")
