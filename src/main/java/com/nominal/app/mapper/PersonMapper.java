@@ -1,5 +1,6 @@
-package com.nominal.app;
+package com.nominal.app.mapper;
 
+import com.nominal.app.model.Person;
 import org.springframework.stereotype.Component;
 
 import java.sql.ResultSet;
@@ -8,7 +9,7 @@ import java.sql.SQLException;
 /************************************************************************
  Made by        PatrickSys
  Date           05/05/2021
- Package        repo
+ Package        com.nominal.app.repo
  Description:
  ************************************************************************/
 

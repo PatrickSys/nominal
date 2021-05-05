@@ -1,5 +1,6 @@
-package com.nominal.app;
+package com.nominal.app.repo;
 
+import com.nominal.app.model.Person;
 import org.springframework.stereotype.Repository;
 
 import java.sql.SQLException;
@@ -8,7 +9,7 @@ import java.util.List;
 /************************************************************************
  Made by        PatrickSys
  Date           05/05/2021
- Package        service
+ Package        com.nominal.app.service
  Description:
  ************************************************************************/
 
