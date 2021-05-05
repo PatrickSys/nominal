@@ -1,9 +1,11 @@
 package com.nominal.app;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.SQLException;
 import java.util.List;
 
 /************************************************************************
@@ -17,7 +19,7 @@ import java.util.List;
 @RequestMapping("/people")
 public class PersonController {
 
-
+    @Autowired
     private PersonService personService;
 
 
@@ -26,27 +28,28 @@ public class PersonController {
     }
 
     @GetMapping("/all")
-    public ResponseEntity<List<Person>> getAllPeople(){
+    public ResponseEntity<List<Person>> getAllPeople() throws SQLException {
         List<Person> people = personService.getAllPeople();
         return new ResponseEntity<>(people, HttpStatus.OK);
     }
 
     @GetMapping("/find/{dni}")
-    public ResponseEntity<Person> getPersonByDni (@PathVariable("dni") String dni){
+    public ResponseEntity<Person> getPersonByDni (@PathVariable("dni") String dni) throws SQLException {
 
         Person person = personService.getPersonByDni(dni);
+        System.out.println(person);
         return new ResponseEntity<>(person, HttpStatus.OK);
     }
 
     @PostMapping("/add")
     public ResponseEntity<Person> addPerson(@RequestBody Person person){
-        return  new ResponseEntity<>(person, HttpStatus.CREATED);
+        return new ResponseEntity<>(person, HttpStatus.CREATED);
     }
 
     @PutMapping("/update")
     public ResponseEntity<Person> updatePerson(@RequestBody Person person){
         int updatePerson = personService.updatePerson(person);
-        return new ResponseEntity<>(HttpStatus.OK);
+        return new ResponseEntity<>(person,HttpStatus.OK);
 
     }
 

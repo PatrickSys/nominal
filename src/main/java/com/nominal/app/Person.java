@@ -2,7 +2,6 @@ package com.nominal.app;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.time.Year;
 
 /************************************************************************
  Made by        Nominal Team
@@ -19,7 +18,7 @@ public class Person implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, updatable = false)
     private String dni;
-    private Year yob;
+    private int yob;
     private String name;
     private String secondName;
     private String lastName;
@@ -31,7 +30,7 @@ public class Person implements Serializable {
     }
 
 
-    public Person(String dni, Year yob, String name, String secondName, String lastName, int phone, String email) {
+    public Person(String dni, int yob, String name, String secondName, String lastName, int phone, String email) {
         this.dni = dni;
         this.yob = yob;
         this.name = name;
@@ -51,11 +50,11 @@ public class Person implements Serializable {
         this.dni = dni;
     }
 
-    public Year getYob() {
+    public int getYob() {
         return yob;
     }
 
-    public void setYob(Year yob) {
+    public void setYob(int yob) {
         this.yob = yob;
     }
 

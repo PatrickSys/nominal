@@ -2,6 +2,7 @@ package com.nominal.app;
 
 import org.springframework.stereotype.Repository;
 
+import java.sql.SQLException;
 import java.util.List;
 
 /************************************************************************
@@ -15,9 +16,9 @@ import java.util.List;
 public interface PersonRepo {
 
 
-    List< Person > getAllPeople();
-    Person getPersonByDni(String dni);
-    int addPerson(Person person);
+    List <Person>  getAllPeople() throws SQLException;
+    Person getPersonByDni(String dni) throws SQLException;
+    Person addPerson(Person person) throws SQLException;
     int updatePerson(Person person);
     int deletePersonByDni(String dni);
 

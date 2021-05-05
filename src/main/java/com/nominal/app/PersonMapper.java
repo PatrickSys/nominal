@@ -1,6 +1,6 @@
 package com.nominal.app;
 
-import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Component;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -12,13 +12,15 @@ import java.sql.SQLException;
  Description:
  ************************************************************************/
 
-public class PersonMapper implements RowMapper<Person> {
+@Component
+public class PersonMapper {
 
 
-        public Person mapRow(ResultSet rs, int rowNum) throws SQLException {
+        public Person mapRow(ResultSet rs) throws SQLException {
 
             Person person = new Person();
             person.setDni(rs.getString("dni"));
+            person.setYob(rs.getInt("yob"));
             person.setName(rs.getString("name"));
             person.setSecondName(rs.getString("second_name"));
             person.setLastName(rs.getString("last_name"));
