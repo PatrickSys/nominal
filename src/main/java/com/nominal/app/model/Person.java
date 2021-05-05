@@ -1,4 +1,4 @@
-package com.nominal.app;
+package com.nominal.app.model;
 
 import javax.persistence.*;
 import java.io.Serializable;

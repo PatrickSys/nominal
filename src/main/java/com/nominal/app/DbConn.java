@@ -15,11 +15,11 @@ import java.sql.Statement;
  ************************************************************************/
 
 @Component
-public class Conn {
+public class DbConn {
 
     Connection connection;
 
-    public Conn() throws Exception{
+    public DbConn() throws Exception{
 
         this.connection = DriverManager.getConnection("jdbc:mariadb://192.168.1.100:3306/nominal", "patrickdb", "nominalpatrick");
 

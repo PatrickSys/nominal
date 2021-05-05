@@ -18,10 +18,10 @@ import java.sql.Statement;
 public class Queries {
 
     @Autowired
-    Conn connection;
+    DbConn connection;
 
     public Queries() throws Exception {
-        this.connection = new Conn();
+        this.connection = new DbConn();
     }
 
 

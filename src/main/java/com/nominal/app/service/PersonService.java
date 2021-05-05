@@ -1,5 +1,9 @@
-package com.nominal.app;
+package com.nominal.app.service;
 
+import com.nominal.app.Queries;
+import com.nominal.app.repo.*;
+import com.nominal.app.mapper.PersonMapper;
+import com.nominal.app.model.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
@@ -13,7 +17,7 @@ import java.util.List;
 /************************************************************************
  Made by        Nominal Team
  Date           05/05/2021
- Package        repo
+ Package        com.nominal.app.repo
  Description:
  ************************************************************************/
 
@@ -40,7 +44,7 @@ public class PersonService implements PersonRepo {
 
 
     @Override
-    public List < Person > getAllPeople() throws SQLException {
+    public List <Person> getAllPeople() throws SQLException {
 
         LinkedList<Person> people = new LinkedList<>();
         ResultSet result = queries.query("SELECT * FROM people");
