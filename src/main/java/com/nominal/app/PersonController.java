@@ -43,15 +43,21 @@ public class PersonController {
 
     @PostMapping("/add")
     public ResponseEntity<Person> addPerson(@RequestBody Person person) throws SQLException {
-        Person addPerson = personService.addPerson(person);
-        return new ResponseEntity<>(addPerson, HttpStatus.CREATED);
+        Person newPerson = personService.addPerson(person);
+        return new ResponseEntity<>(person, HttpStatus.CREATED);
     }
 
     @PutMapping("/update")
-    public ResponseEntity<Person> updatePerson(@RequestBody Person person){
-        int updatePerson = personService.updatePerson(person);
+    public ResponseEntity<Person> updatePerson(@RequestBody Person person) throws SQLException {
+        Person updatePerson = personService.updatePerson(person);
         return new ResponseEntity<>(person,HttpStatus.OK);
 
+    }
+
+    @DeleteMapping("delete/{dni}")
+    public ResponseEntity<?> deletePerson(@PathVariable("dni") String dni) throws SQLException {
+        personService.deletePersonByDni(dni);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
 }

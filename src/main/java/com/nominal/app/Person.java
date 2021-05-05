@@ -110,4 +110,15 @@ public class Person implements Serializable {
                 ", email='" + email + '\'' +
                 '}';
     }
+
+    public String toQueryInfo(){
+
+        return "\"" + dni + "\"," +
+                 yob + " ,\"" +
+                 name + "\",\"" +
+                 secondName + "\", \"" +
+                 lastName + "\", " +
+                 phone + ", \"" +
+                 email + "\"";
+    }
 }

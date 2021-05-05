@@ -47,7 +47,6 @@ public class PersonService implements PersonRepo {
 
 
         while (result.next()){
-            System.out.println(mapper.mapRow(result));
             people.add(mapper.mapRow(result));
 
         }
@@ -60,17 +59,34 @@ public class PersonService implements PersonRepo {
     @Override
     public Person getPersonByDni(String dni) throws SQLException {
 
-        Person person = new Person();
         String query = "SELECT * FROM people WHERE dni = \"" + dni + "\"";
 
-        ResultSet result = queries.query(query);
+
+        return personFromQuery(query);
+
+    }
+
+    private Person personFromQuery(String query) throws SQLException {
+        Person person = new Person();
+        ResultSet resultSet = queries.query((query));
 
 
-        if (result.next()){
-            System.out.println(mapper.mapRow(result));
-            person =  mapper.mapRow(result);
+        if (resultSet.next()){
+            person =  mapper.mapRow(resultSet);
 
         }
+
+        return person;
+
+    }
+    @Override
+    public Person addPerson(Person person) throws SQLException {
+
+
+        String query = "insert into people (dni, yob, name, second_name, last_name, phone, email) values (" + person.toQueryInfo() + ")";
+
+
+        person = personFromQuery(query);
 
         return person;
 
@@ -78,32 +94,23 @@ public class PersonService implements PersonRepo {
 
 
     @Override
-    public Person addPerson(Person person) throws SQLException {
+    public void deletePersonByDni(String dni) throws SQLException {
+        queries.query("delete from people where dni = \"" + dni + "\"");
 
-        System.out.println(person);
-
-        String query = "insert into people (dni, yob, name, second_name, last_name, phone, email) values (\"" + person.getDni() + "\", " + person.getYob() + " , " +
-                "\"" + person.getName() + "\", \"" + person.getSecondName() + "\", \"" + person.getLastName() + "\",  " + person.getPhone() + ", \"" + person.getEmail() + "\")";
-
-        //ResultSet resultSet = queries.query("insert into people(dni, yob, name, second_name, last_name, phone, email) values(%s,%d,%s,%s,%s,%d,%s)");
-
-        System.out.println(query);
-
-
-        return mapper.mapRow(queries.query(query));
     }
 
 
     @Override
-    public int deletePersonByDni(String dni) {
-        return jdbcTemplate.update("delete from people where dni=?", dni);
+    public Person updatePerson(Person person) throws SQLException {
+        String update = "update people set  yob = " + person.getYob() + ", name = \"" + person.getName() + "\", second_name = \"" +
+                person.getSecondName() + "\", last_name = \"" + person.getLastName() + "\", phone = " + person.getPhone() + ",  email = \"" + person.getEmail() +"\""
+        + " where dni = \"" + person.getDni() + "\"";
+        //return jdbcTemplate.update("update people" + " set yob = ?, name = ?, second_name = ?, last_name = ?, phone = ?, email = ? " + " where dni = ? ");
+        System.out.println(update);
+        return personFromQuery(update);
     }
 
 
-    @Override
-    public int updatePerson(Person person) {
-        return jdbcTemplate.update("update people" + " set yob = ?, name = ?, second_name = ?, last_name = ?, phone = ?, email = ? " + " where dni = ? ");
-    }
     }
 
 

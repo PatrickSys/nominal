@@ -19,8 +19,8 @@ public interface PersonRepo {
     List <Person>  getAllPeople() throws SQLException;
     Person getPersonByDni(String dni) throws SQLException;
     Person addPerson(Person person) throws SQLException;
-    int updatePerson(Person person);
-    int deletePersonByDni(String dni);
+    Person updatePerson(Person person) throws SQLException;
+    void deletePersonByDni(String dni) throws SQLException;
 
 
 
