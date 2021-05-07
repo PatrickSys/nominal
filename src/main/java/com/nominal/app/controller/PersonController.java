@@ -1,6 +1,5 @@
 package com.nominal.app.controller;
 
-import com.nominal.app.exceptions.NotFoundException;
 import com.nominal.app.model.Person;
 import com.nominal.app.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.sql.SQLException;
 import java.util.List;
-import java.util.Optional;
 
 /************************************************************************
  Made by        Nominal Team
@@ -27,7 +25,7 @@ public class PersonController {
     private PersonService personService;
 
 
-    public PersonController(PersonService personService) {
+    public PersonController(PersonService personService)  {
         this.personService = personService;
     }
 
@@ -39,8 +37,7 @@ public class PersonController {
 
     @GetMapping("/find/{dni}")
     public ResponseEntity<?> getPersonByDni (@PathVariable("dni") String dni) throws Exception {
-
-        Person person = Optional.ofNullable(personService.findPersonByDni(dni)).orElseThrow(() -> new NotFoundException("message"));
+        Person person = personService.findPersonByDni(dni);
         return new ResponseEntity<>(person, HttpStatus.OK);
     }
 
@@ -57,7 +54,7 @@ public class PersonController {
 
     }
 
-    @DeleteMapping("delete/{dni}")
+    @DeleteMapping("/delete/{dni}")
     public ResponseEntity<?> deletePerson(@PathVariable("dni") String dni) throws Exception {
         personService.deletePersonByDni(dni);
         return new ResponseEntity<>(HttpStatus.OK);

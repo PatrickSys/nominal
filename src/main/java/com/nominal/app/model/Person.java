@@ -12,7 +12,7 @@ import java.io.Serializable;
 
 @Entity
 @Table
-public class Person implements Serializable {
+public class   Person implements Serializable {
 
 
     @Id

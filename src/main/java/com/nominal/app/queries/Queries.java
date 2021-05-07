@@ -30,8 +30,9 @@ public abstract class Queries {
     // as an id shall be unique it only returns a single value
     public ResultSet retrieveOneRow(String sql) throws SQLException {
 
+
         ResultSet resultSet = executeQuery(sql);
-        if (resultSet.next()) {
+        if (resultSet!= null && resultSet.next()) {
             return resultSet;
         }
         else return null;
