@@ -29,21 +29,24 @@ public class PersonService extends PersonRepo {
     }
 
 
+
     public List <Person> getAllPeople() throws SQLException {
         return findAll();
     }
 
 
+    @Override
     //TODO Return  exception if not found!!
     public Person findPersonByDni(String dni) throws Exception {
         return super.findPersonByDni(dni);
     }
 
-
+    @Override
     public Person addPerson(Person person) throws SQLException {
         return super.addPerson(person);
     }
 
+    @Override
     public Person updatePerson(Person person) throws SQLException {
         return super.updatePerson(person);
     }
