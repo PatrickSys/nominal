@@ -7,12 +7,15 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 @Component
-public class EmployeesMapper implements Mapper<Employee>{
+public class EmployeeMapper implements Mapper<Employee>{
     @Override
     public Employee mapRow(ResultSet resultSet) throws SQLException {
-        int ID;
-        String professional_categories;
-        double min_day_payroll, max_day_payroll, min_month_payroll, max_month_payroll;
-        return null;
+        Employee employee = new Employee();
+        employee.setDni(resultSet.getString("dni"));
+        employee.setID(resultSet.getInt("id"));
+        employee.setNaf(resultSet.getString("naf"));
+        employee.setProfessional_group(resultSet.getString("professional_group"));
+        employee.setQuotation_group(resultSet.getInt("quotation_group"));
+        return employee;
     }
 }
