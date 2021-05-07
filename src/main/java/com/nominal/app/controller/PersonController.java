@@ -1,5 +1,6 @@
 package com.nominal.app.controller;
 
+import com.nominal.app.exceptions.NotFoundException;
 import com.nominal.app.model.Person;
 import com.nominal.app.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,9 +10,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Optional;
 
 /************************************************************************
- Made by        PatrickSys
+ Made by        Nominal Team
  Date           05/05/2021
  Package        com.nominal.app.controller
  Description:
@@ -36,28 +38,27 @@ public class PersonController {
     }
 
     @GetMapping("/find/{dni}")
-    public ResponseEntity<Person> getPersonByDni (@PathVariable("dni") String dni) throws SQLException {
+    public ResponseEntity<?> getPersonByDni (@PathVariable("dni") String dni) throws Exception {
 
-        Person person = personService.getPersonByDni(dni);
-        System.out.println(person);
+        Person person = Optional.ofNullable(personService.findPersonByDni(dni)).orElseThrow(() -> new NotFoundException("message"));
         return new ResponseEntity<>(person, HttpStatus.OK);
     }
 
     @PostMapping("/add")
     public ResponseEntity<Person> addPerson(@RequestBody Person person) throws SQLException {
         Person newPerson = personService.addPerson(person);
-        return new ResponseEntity<>(person, HttpStatus.CREATED);
+        return new ResponseEntity<>(newPerson, HttpStatus.CREATED);
     }
 
     @PutMapping("/update")
     public ResponseEntity<Person> updatePerson(@RequestBody Person person) throws SQLException {
         Person updatePerson = personService.updatePerson(person);
-        return new ResponseEntity<>(person,HttpStatus.OK);
+        return new ResponseEntity<>(updatePerson,HttpStatus.OK);
 
     }
 
     @DeleteMapping("delete/{dni}")
-    public ResponseEntity<?> deletePerson(@PathVariable("dni") String dni) throws SQLException {
+    public ResponseEntity<?> deletePerson(@PathVariable("dni") String dni) throws Exception {
         personService.deletePersonByDni(dni);
         return new ResponseEntity<>(HttpStatus.OK);
     }

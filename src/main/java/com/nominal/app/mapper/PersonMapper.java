@@ -7,26 +7,26 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /************************************************************************
- Made by        PatrickSys
+ Made by        Nominal Team
  Date           05/05/2021
  Package        com.nominal.app.repo
- Description:
+ Description:   Mapper for Person object given a resultset
  ************************************************************************/
 
 @Component
-public class PersonMapper {
+public class PersonMapper implements Mapper<Person> {
 
-
-        public Person mapRow(ResultSet rs) throws SQLException {
+        // iterates over a person ResultSet to create the object
+        public Person mapRow(ResultSet resultSet) throws SQLException {
 
             Person person = new Person();
-            person.setDni(rs.getString("dni"));
-            person.setYob(rs.getInt("yob"));
-            person.setName(rs.getString("name"));
-            person.setSecondName(rs.getString("second_name"));
-            person.setLastName(rs.getString("last_name"));
-            person.setPhone(rs.getInt("phone"));
-            person.setEmail(rs.getString("email"));
+            person.setDni(resultSet.getString("dni"));
+            person.setYob(resultSet.getInt("yob"));
+            person.setName(resultSet.getString("name"));
+            person.setSecondName(resultSet.getString("second_name"));
+            person.setLastName(resultSet.getString("last_name"));
+            person.setPhone(resultSet.getInt("phone"));
+            person.setEmail(resultSet.getString("email"));
 
             return person;
 

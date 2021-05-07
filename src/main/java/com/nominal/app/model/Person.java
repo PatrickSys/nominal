@@ -14,6 +14,7 @@ import java.io.Serializable;
 @Table
 public class Person implements Serializable {
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, updatable = false)
@@ -23,9 +24,7 @@ public class Person implements Serializable {
     private String secondName;
     private String lastName;
     private int phone;
-    @Column(nullable = false, updatable = false)
     private String email;
-
     public Person() {
     }
 
@@ -104,13 +103,14 @@ public class Person implements Serializable {
                 "dni='" + dni + '\'' +
                 ", yob=" + yob +
                 ", name='" + name + '\'' +
-                ", secondName='" + secondName + '\'' +
-                ", lastName='" + lastName + '\'' +
+                ", second_name='" + secondName + '\'' +
+                ", last_name='" + lastName + '\'' +
                 ", phone=" + phone +
                 ", email='" + email + '\'' +
                 '}';
     }
 
+    // gets info from a Person to be used in a query
     public String toQueryInfo(){
 
         return "\"" + dni + "\"," +
