@@ -19,17 +19,20 @@ public class PersonMapper implements Mapper<Person> {
         // iterates over a person ResultSet to create the object
         public Person mapRow(ResultSet resultSet) throws SQLException {
 
-            Person person = new Person();
-            person.setDni(resultSet.getString("dni"));
-            person.setYob(resultSet.getInt("yob"));
-            person.setName(resultSet.getString("name"));
-            person.setSecondName(resultSet.getString("second_name"));
-            person.setLastName(resultSet.getString("last_name"));
-            person.setPhone(resultSet.getInt("phone"));
-            person.setEmail(resultSet.getString("email"));
+            if (null != resultSet) {
+                Person person = new Person();
+                person.setDni(resultSet.getString("dni"));
+                person.setYob(resultSet.getInt("yob"));
+                person.setName(resultSet.getString("name"));
+                person.setSecondName(resultSet.getString("second_name"));
+                person.setLastName(resultSet.getString("last_name"));
+                person.setPhone(resultSet.getInt("phone"));
+                person.setEmail(resultSet.getString("email"));
 
-            return person;
+                return person;
 
+            }
+            else return null;
         }
     }
 
