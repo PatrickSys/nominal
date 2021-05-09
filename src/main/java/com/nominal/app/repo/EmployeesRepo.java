@@ -28,7 +28,7 @@ public abstract class EmployeesRepo extends Repo<Employee>{
     }
 
     public Employee addEmployee(Employee employee) throws Exception {
-        return super.add(employee, "employees", "(dni, naf, professional_group, quotation_group)", employee.toQueryInfo()  );
+        return super.add(employee, "employees", "(dni, naf, retributive_group, establishment_category)", employee.toQueryInfo()  );
     }
 
     public Employee updateEmployee(Employee employee) throws SQLException{

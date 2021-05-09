@@ -11,8 +11,8 @@ public class Employee{
     int ID;
     String dni;
     String naf;
-    String professional_group;
-    int quotation_group;
+    char retributive_group;
+    char establishment_category;
 
     public int getID() {
         return ID;
@@ -24,11 +24,11 @@ public class Employee{
         return naf;
     }
 
-    public String getProfessional_group() {
-        return professional_group;
+    public char getRetributive_group() {
+        return retributive_group;
     }
-    public int getQuotation_group(){
-        return quotation_group;
+    public char getEstablishment_category(){
+        return establishment_category;
     }
 
 
@@ -36,9 +36,9 @@ public class Employee{
     public String toQueryInfo(){
 
         String info =   "\"" + dni + "\",\"" +
-                naf + "\",\"" +
-                professional_group + "\", " +
-                quotation_group;
+                naf + "\",'" +
+                retributive_group + "', " + "'" +
+                establishment_category + "'";
 
         return info;
     }
@@ -49,8 +49,8 @@ public class Employee{
                 "ID=" + ID +
                 ", dni='" + dni + '\'' +
                 ", naf='" + naf + '\'' +
-                ", professional_group='" + professional_group + '\'' +
-                ", quotation_group=" + quotation_group +
+                ", retributive_group='" + retributive_group + '\'' +
+                ", establishment_category=" + establishment_category +
                 '}';
     }
 
@@ -66,11 +66,11 @@ public class Employee{
         this.naf = naf;
     }
 
-    public void setProfessional_group(String professional_group) {
-        this.professional_group = professional_group;
+    public void setRetributive_group(char retributive_group) {
+        this.retributive_group = retributive_group;
     }
 
-    public void setQuotation_group(int quotation_group) {
-        this.quotation_group = quotation_group;
+    public void setEstablishment_category(char quotation_group) {
+        this.establishment_category = quotation_group;
     }
 }
