@@ -8,6 +8,7 @@ class AppApplicationTests {
 
     @Test
     void contextLoads() {
+        System.err.println("hotel de 4 y 5 estrellas".contains("hotel de 4 estrellas"));
     }
 
 }

@@ -5,6 +5,7 @@ import com.nominal.app.repo.EmployeesRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -36,7 +37,10 @@ public class EmployeeService extends EmployeesRepo {
     public Employee addEmployee(Employee employee) throws Exception {
 
         super.addEmployee(employee);
-        String id = executeQuery("select id from employees where dni =\"" + employee.getDni()) + "\"";
+        String sql = "select id from employees where dni = \"" + employee.getDni() + "\"";
+        ResultSet resultSet = executeQuery(sql);
+        resultSet.next();
+        String id = resultSet.getString("id");
         return super.EmployeeQueries.employeesFromQuery(Integer.parseInt(id));
     }
 

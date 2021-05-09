@@ -15,6 +15,7 @@ public class EmployeeMapper implements Mapper<Employee>{
         employee.setID(resultSet.getInt("id"));
         employee.setNaf(resultSet.getString("naf"));
         employee.setProfessional_group(resultSet.getString("professional_group"));
+        System.err.println(resultSet.getString("professional_group"));
         employee.setQuotation_group(resultSet.getInt("quotation_group"));
         return employee;
     }

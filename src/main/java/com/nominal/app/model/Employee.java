@@ -35,10 +35,12 @@ public class Employee{
     // gets info from a Employee to be used in a query
     public String toQueryInfo(){
 
-        return  "\"" + dni + "\",\"" +
+        String info =   "\"" + dni + "\",\"" +
                 naf + "\",\"" +
                 professional_group + "\", " +
                 quotation_group;
+
+        return info;
     }
 
     @Override
