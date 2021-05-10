@@ -38,8 +38,7 @@ public class EmployeeService extends EmployeesRepo {
 
         super.addEmployee(employee);
         String sql = "select id from employees where dni = \"" + employee.getDni() + "\"";
-        ResultSet resultSet = executeQuery(sql);
-        resultSet.next();
+        ResultSet resultSet = retrieveOneRow(sql);
         String id = resultSet.getString("id");
         return super.EmployeeQueries.employeesFromQuery(Integer.parseInt(id));
     }

@@ -1,7 +1,10 @@
 package com.nominal.app.queries;
 
 import java.sql.SQLException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 
 /************************************************************************
  Made by        Nominal team
@@ -18,6 +21,7 @@ public class FolQueries extends Queries {
     public static void main(String[] args) throws Exception {
         FolQueries FolQueries = new FolQueries();
         FolQueries.insertFolData();
+        List<List<String>> allRetrib = FolQueries.getAllRetributionGroups();
 
 
     }
@@ -25,6 +29,8 @@ public class FolQueries extends Queries {
 
     public void insertFolData() throws Exception {
 
+        String tables = "ey";
+        //executeQuery("");
         List<List<String>> allRetributionGroups = getAllRetributionGroups();
         List<List<String>> allEstablishmentCategories = getAllCategories();
         List<String> monthlyPayment = getMonthlyPayment();
@@ -33,7 +39,7 @@ public class FolQueries extends Queries {
         //insertEstablishmentCategories();
         //insertEstablishment_types(allEstablishmentCategories);
         //insertRetributiveGroups(allRetributionGroups);
-        //insertJobPositions(allRetributionGroups);
+        insertJobPositions(allRetributionGroups);
         insertBaseSalaries( allEstablishmentCategories, allRetributionGroups);
 
 
@@ -106,9 +112,11 @@ public class FolQueries extends Queries {
         for (List retributionLevel : allRetrib) {
 
             for (Object job : retributionLevel) {
-                String sql = "insert into job_positions VALUES (default, \"" + job + "\",'" + index + "')";
+                String sql = "insert into job_positions VALUES (default, \"" + index + "\",'" + job + "')";
                 executeQuery(sql);
+
             }
+
             index++;
         }
     }
@@ -126,7 +134,7 @@ public class FolQueries extends Queries {
 
             for (List<String> group : retributiveGroup){
 
-                    String sql ="insert into base_salaries values(default, 1, '" + (retributiveGroup.indexOf(group)+1)  + "', '" + catLetters[i] + "', " + monthlypayment.get(thisindex) + ")";
+                    String sql ="insert into base_salaries values(default, \"8612062018\", '" + (retributiveGroup.indexOf(group)+1)  + "', '" + catLetters[i] + "', " + monthlypayment.get(thisindex) + ")";
                     executeQuery(sql);
 
 
@@ -153,10 +161,8 @@ public class FolQueries extends Queries {
 
 
 
-        String convention = "insert into conventions VALUES(default, \"8612062018\") ";
-        String idConvention = "select * from conventions where boe_number = \"8612062018\" ";
+        String convention = "insert into conventions VALUES( \"8612062018\") ";
         executeQuery(convention);
-        System.err.println((executeQuery(idConvention)));
 
     }
     /**

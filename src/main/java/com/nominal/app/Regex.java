@@ -1,4 +1,4 @@
-package com.nominal.app.template;
+package com.nominal.app;
 
 /************************************************************************
  Made by        PatrickSys

@@ -15,22 +15,6 @@ public class Employee{
     char retributiveGroup;
     char establishmentCategory;
 
-    public int getID() {
-        return ID;
-    }
-    public String getDni() {
-        return dni;
-    }
-    public String getNaf(){
-        return naf;
-    }
-
-    public char getRetributiveGroup() {
-        return retributiveGroup;
-    }
-    public char getEstablishmentCategory(){
-        return establishmentCategory;
-    }
 
 
     // gets info from a Employee to be used in a query
@@ -55,6 +39,23 @@ public class Employee{
                 ", retributive_group='" + retributiveGroup + '\'' +
                 ", establishment_category=" + establishmentCategory +
                 '}';
+    }
+
+    public int getID() {
+        return ID;
+    }
+    public String getDni() {
+        return dni;
+    }
+    public String getNaf(){
+        return naf;
+    }
+
+    public char getRetributiveGroup() {
+        return retributiveGroup;
+    }
+    public char getEstablishmentCategory(){
+        return establishmentCategory;
     }
 
     public String getJobPosition() {
