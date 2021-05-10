@@ -11,8 +11,9 @@ public class Employee{
     int ID;
     String dni;
     String naf;
-    char retributive_group;
-    char establishment_category;
+    String jobPosition;
+    char retributiveGroup;
+    char establishmentCategory;
 
     public int getID() {
         return ID;
@@ -24,11 +25,11 @@ public class Employee{
         return naf;
     }
 
-    public char getRetributive_group() {
-        return retributive_group;
+    public char getRetributiveGroup() {
+        return retributiveGroup;
     }
-    public char getEstablishment_category(){
-        return establishment_category;
+    public char getEstablishmentCategory(){
+        return establishmentCategory;
     }
 
 
@@ -36,9 +37,10 @@ public class Employee{
     public String toQueryInfo(){
 
         String info =   "\"" + dni + "\",\"" +
-                naf + "\",'" +
-                retributive_group + "', " + "'" +
-                establishment_category + "'";
+                naf + "\",\"" +
+                jobPosition + "\"," + "'" +
+                retributiveGroup + "', " + "'" +
+                establishmentCategory + "'";
 
         return info;
     }
@@ -49,9 +51,14 @@ public class Employee{
                 "ID=" + ID +
                 ", dni='" + dni + '\'' +
                 ", naf='" + naf + '\'' +
-                ", retributive_group='" + retributive_group + '\'' +
-                ", establishment_category=" + establishment_category +
+                ", job_position ='" + jobPosition + '\'' +
+                ", retributive_group='" + retributiveGroup + '\'' +
+                ", establishment_category=" + establishmentCategory +
                 '}';
+    }
+
+    public String getJobPosition() {
+        return jobPosition;
     }
 
     public void setID(int ID) {
@@ -66,11 +73,15 @@ public class Employee{
         this.naf = naf;
     }
 
-    public void setRetributive_group(char retributive_group) {
-        this.retributive_group = retributive_group;
+    public void setJobPosition(String jobPosition) {
+        this.jobPosition = jobPosition;
     }
 
-    public void setEstablishment_category(char quotation_group) {
-        this.establishment_category = quotation_group;
+    public void setRetributiveGroup(char retributive_group) {
+        this.retributiveGroup = retributive_group;
+    }
+
+    public void setEstablishmentCategory(char quotation_group) {
+        this.establishmentCategory = quotation_group;
     }
 }
