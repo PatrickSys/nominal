@@ -13,7 +13,7 @@ import java.util.List;
 @Repository
 public abstract class EmployeesRepo extends Repo<Employee>{
     @Autowired
-    public EmployeeQueries EmployeeQueries = new EmployeeQueries();
+    public final EmployeeQueries EmployeeQueries = new EmployeeQueries();
 
     @Autowired
     protected EmployeesRepo() throws Exception {
@@ -33,10 +33,7 @@ public abstract class EmployeesRepo extends Repo<Employee>{
 
     //gets the employee retributive group given it's job position name, then adds the employee to our database
     public Employee addEmployee(Employee employee) throws Exception {
-        System.err.println(employee.toString());
-        char employeeRetributiveGroup = getRetributiveGroupByJobName(employee.getJobPosition());
-        employee.setRetributiveGroup(employeeRetributiveGroup);
-
+        employee.setRetributiveGroup(getRetributiveGroupByJobName(employee.getJobPosition()));
         return super.add(employee, "employees", "(dni, naf,  job_position, retributive_group, establishment_category, hire_date)", employee.toQueryInfo()  );
     }
 
@@ -54,14 +51,8 @@ public abstract class EmployeesRepo extends Repo<Employee>{
 
     //gets the employee retributive group given the job's name
     public char getRetributiveGroupByJobName(String jobName) throws SQLException {
-
-        char retributiveGroup = ' ';
-        ResultSet resultSet = executeQuery("select retributive_group from job_positions where job_position_name = \"" + jobName + "\"");
-
-        if (resultSet.next()){
-            retributiveGroup = resultSet.getString("retributive_group").charAt(0);
-        }
-        return retributiveGroup;
-
+        String sql = "select retributive_group from job_positions where job_position_name = \"" + jobName + "\"";
+        ResultSet resultSet = retrieveOneRow(sql);
+        return  resultSet.getString("retributive_group").charAt(0);
     }
 }

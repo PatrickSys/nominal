@@ -74,3 +74,9 @@ CREATE TABLE IF NOT EXISTS job_positions(
 	job_position_name VARCHAR(80) UNIQUE
 );
 
+CREATE TABLE IF NOT EXISTS establishment_types(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    establishment_category SET('A','B','C'),
+    FOREIGN KEY (establishment_category) REFERENCES establishment_categories(id),
+    establishment_type VARCHAR(70)
+)

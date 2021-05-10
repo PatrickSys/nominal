@@ -22,14 +22,12 @@ public class Employee{
     // gets info from a Employee to be used in a query
     public String toQueryInfo(){
 
-        String info =   "\"" + dni + "\",\"" +
+        return "\"" + dni + "\",\"" +
                 naf + "\",\"" +
                 jobPosition + "\"," + "'" +
                 retributiveGroup + "', " + "'" +
                 establishmentCategory + "',\"" +
                 hireDate + "\"";
-
-        return info;
     }
 
     @Override

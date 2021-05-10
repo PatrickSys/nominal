@@ -22,14 +22,13 @@ public class FolQueries extends Queries {
         FolQueries FolQueries = new FolQueries();
         FolQueries.insertFolData();
         List<List<String>> allRetrib = FolQueries.getAllRetributionGroups();
-
+        //FolQueries.insertRetributiveGroups(allRetrib);
 
     }
 
 
     public void insertFolData() throws Exception {
 
-        String tables = "ey";
         //executeQuery("");
         List<List<String>> allRetributionGroups = getAllRetributionGroups();
         List<List<String>> allEstablishmentCategories = getAllCategories();
@@ -39,12 +38,14 @@ public class FolQueries extends Queries {
         //insertEstablishmentCategories();
         //insertEstablishment_types(allEstablishmentCategories);
         //insertRetributiveGroups(allRetributionGroups);
-        insertJobPositions(allRetributionGroups);
-        insertBaseSalaries( allEstablishmentCategories, allRetributionGroups);
+        //insertJobPositions(allRetributionGroups);
+        //insertBaseSalaries( allEstablishmentCategories, allRetributionGroups);
+        //insertEstablishment_types(allEstablishmentCategories);
 
 
 
     }
+
 
     public List<List<String>> getAllRetributionGroups(){
         String[] firstRetributionLevel = {"Jefe de recepción", "Monta discos", "Primer conserje", "Jefe de operaciones de catering", "Jefe de cocina", "Jefe de personal de catering", "Jefe de comedor", "Jefe de compras de catering", "Contable general", "Jefe de administración de catering", "Primer encargado de mostrador", "Jefe de mantenimiento de catering", "Primer jefe de sala", "Jefe de supervisores de catering", "Encargado general pisos y limpieza", "Encargado de mantenimiento y servicios"};
@@ -93,18 +94,23 @@ public class FolQueries extends Queries {
         return Arrays.asList(eurosMes);
     }
 
+    /**
+     * Add retributve_groups
+     */
     private void insertRetributiveGroups(List<List<String>> allRetributionGroups) throws SQLException {
         int index = 1;
         for(List<String> retributionGroup : allRetributionGroups){
                 String sql = "insert into retributive_groups VALUES ('" + index + "')";
+
+                //executeQuery(sql);
             System.err.println(sql);
-                executeQuery(sql);
 
             index++;
         }
     }
+
     /**
-     * Add retributve_groups
+     * Add job_positions
      */
     private void insertJobPositions(List<List<String>> allRetrib) throws SQLException {
         int index = 1;
@@ -124,7 +130,6 @@ public class FolQueries extends Queries {
     /**
      * Add base_salaries
      */
-    //TODO fix this
     private void insertBaseSalaries( List<List<String>> allCategories, List<List<String>> retributiveGroup) throws SQLException {
         char[] catLetters = {'A','B','C'};
         List<String> monthlypayment = getMonthlyPayment();
@@ -147,11 +152,9 @@ public class FolQueries extends Queries {
     /**
      * Add establishment_categories
      */
-    private void insertEstablishmentCategories() throws SQLException {
-
-
-        String addCategoeries = "insert into establishment_categories VALUES('A'), ('B'), ('C')";
-        executeQuery(addCategoeries);
+    private void insertEstablishmentCategories(List<List<String>> allCat) throws SQLException {
+        String addCategories = "insert into establishment_categories VALUES('A'), ('B'), ('C')";
+        executeQuery(addCategories);
     }
 
     /**
@@ -166,15 +169,15 @@ public class FolQueries extends Queries {
 
     }
     /**
-     * Add establishment_types referenced to establishment categories
+     * Add establishment_types names referenced to establishment categories
      */
     private void insertEstablishment_types(List<List<String>> allCat) throws SQLException {
         char[] catLetters = {'A','B','C'};
         int charindex = 0;
         for (List catLevel: allCat){
 
-            for (Object level : catLevel){
-                String sql = "insert into establishment_types VALUES (default, \"" + level + "\", '" + catLetters[charindex] +   "')";
+            for (Object establishmentName : catLevel){
+                String sql = "insert into establishment_types VALUES (default, '"+ catLetters[charindex] + "', \"" + establishmentName + "\")";
                 executeQuery(sql);
             }
             charindex++;
