@@ -40,6 +40,7 @@ public abstract class Repo <T> extends Queries {
         while (result.next()){
             list.add(mapper.mapRow(result));
         }
+
         return list;
     }
 

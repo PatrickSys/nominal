@@ -24,8 +24,9 @@ public class EmployeeService extends EmployeesRepo {
         super();
     }
 
+    @Override
     public List<Employee> findAllEmployees() throws SQLException {
-        return super.findAll();
+        return super.findAllEmployees();
     }
 
     @Override

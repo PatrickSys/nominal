@@ -1,8 +1,11 @@
 package com.nominal.app.model;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.persistence.*;
 import java.sql.Date;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @Entity
 @Table
 public class Employee{
@@ -11,6 +14,7 @@ public class Employee{
     @Column(nullable = false, updatable = false)
     int ID;
     String dni;
+    String name;
     String naf;
     String jobPosition;
     char retributiveGroup;
@@ -57,6 +61,14 @@ public class Employee{
 
     public void setDni(String dni) {
         this.dni = dni;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getNaf() {
