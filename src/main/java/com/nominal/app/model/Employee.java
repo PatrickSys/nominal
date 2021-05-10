@@ -1,6 +1,7 @@
 package com.nominal.app.model;
 
 import javax.persistence.*;
+import java.sql.Date;
 
 @Entity
 @Table
@@ -11,34 +12,22 @@ public class Employee{
     int ID;
     String dni;
     String naf;
-    String professional_group;
-    int quotation_group;
+    String jobPosition;
+    char retributiveGroup;
+    char establishmentCategory;
+    Date hireDate;
 
-    public int getID() {
-        return ID;
-    }
-    public String getDni() {
-        return dni;
-    }
-    public String getNaf(){
-        return naf;
-    }
-
-    public String getProfessional_group() {
-        return professional_group;
-    }
-    public int getQuotation_group(){
-        return quotation_group;
-    }
 
 
     // gets info from a Employee to be used in a query
     public String toQueryInfo(){
 
-        return  "\"" + dni + "\",\"" +
+        return "\"" + dni + "\",\"" +
                 naf + "\",\"" +
-                professional_group + "\", " +
-                quotation_group;
+                jobPosition + "\"," + "'" +
+                retributiveGroup + "', " + "'" +
+                establishmentCategory + "',\"" +
+                hireDate + "\"";
     }
 
     @Override
@@ -47,28 +36,66 @@ public class Employee{
                 "ID=" + ID +
                 ", dni='" + dni + '\'' +
                 ", naf='" + naf + '\'' +
-                ", professional_group='" + professional_group + '\'' +
-                ", quotation_group=" + quotation_group +
+                ", job_position ='" + jobPosition + '\'' +
+                ", retributive_group='" + retributiveGroup + '\'' +
+                ", establishment_category=" + establishmentCategory +
+                ",hire_date=" + hireDate +
                 '}';
+    }
+
+    public int getID() {
+        return ID;
     }
 
     public void setID(int ID) {
         this.ID = ID;
     }
 
+    public String getDni() {
+        return dni;
+    }
+
     public void setDni(String dni) {
         this.dni = dni;
+    }
+
+    public String getNaf() {
+        return naf;
     }
 
     public void setNaf(String naf) {
         this.naf = naf;
     }
 
-    public void setProfessional_group(String professional_group) {
-        this.professional_group = professional_group;
+    public String getJobPosition() {
+        return jobPosition;
     }
 
-    public void setQuotation_group(int quotation_group) {
-        this.quotation_group = quotation_group;
+    public void setJobPosition(String jobPosition) {
+        this.jobPosition = jobPosition;
+    }
+
+    public char getRetributiveGroup() {
+        return retributiveGroup;
+    }
+
+    public void setRetributiveGroup(char retributiveGroup) {
+        this.retributiveGroup = retributiveGroup;
+    }
+
+    public char getEstablishmentCategory() {
+        return establishmentCategory;
+    }
+
+    public void setEstablishmentCategory(char establishmentCategory) {
+        this.establishmentCategory = establishmentCategory;
+    }
+
+    public Date getHireDate() {
+        return hireDate;
+    }
+
+    public void setHireDate(Date hireDate) {
+        this.hireDate = hireDate;
     }
 }
