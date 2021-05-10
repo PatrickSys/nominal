@@ -17,6 +17,7 @@ public class EmployeeMapper implements Mapper<Employee>{
         employee.setJobPosition(resultSet.getString("job_position"));
         employee.setRetributiveGroup(resultSet.getString("retributive_group").charAt(0));
         employee.setEstablishmentCategory(resultSet.getString("establishment_category").charAt(0));
+        employee.setHireDate(resultSet.getDate("hire_date"));
         return employee;
     }
 }

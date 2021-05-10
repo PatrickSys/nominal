@@ -37,7 +37,7 @@ public abstract class EmployeesRepo extends Repo<Employee>{
         char employeeRetributiveGroup = getRetributiveGroupByJobName(employee.getJobPosition());
         employee.setRetributiveGroup(employeeRetributiveGroup);
 
-        return super.add(employee, "employees", "(dni, naf,  job_position, retributive_group, establishment_category)", employee.toQueryInfo()  );
+        return super.add(employee, "employees", "(dni, naf,  job_position, retributive_group, establishment_category, hire_date)", employee.toQueryInfo()  );
     }
 
     //updates an employee given the id value

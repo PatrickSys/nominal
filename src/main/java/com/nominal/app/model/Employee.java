@@ -1,6 +1,7 @@
 package com.nominal.app.model;
 
 import javax.persistence.*;
+import java.sql.Date;
 
 @Entity
 @Table
@@ -14,6 +15,7 @@ public class Employee{
     String jobPosition;
     char retributiveGroup;
     char establishmentCategory;
+    Date hireDate;
 
 
 
@@ -24,7 +26,8 @@ public class Employee{
                 naf + "\",\"" +
                 jobPosition + "\"," + "'" +
                 retributiveGroup + "', " + "'" +
-                establishmentCategory + "'";
+                establishmentCategory + "',\"" +
+                hireDate + "\"";
 
         return info;
     }
@@ -38,51 +41,63 @@ public class Employee{
                 ", job_position ='" + jobPosition + '\'' +
                 ", retributive_group='" + retributiveGroup + '\'' +
                 ", establishment_category=" + establishmentCategory +
+                ",hire_date=" + hireDate +
                 '}';
     }
 
     public int getID() {
         return ID;
     }
-    public String getDni() {
-        return dni;
-    }
-    public String getNaf(){
-        return naf;
-    }
-
-    public char getRetributiveGroup() {
-        return retributiveGroup;
-    }
-    public char getEstablishmentCategory(){
-        return establishmentCategory;
-    }
-
-    public String getJobPosition() {
-        return jobPosition;
-    }
 
     public void setID(int ID) {
         this.ID = ID;
+    }
+
+    public String getDni() {
+        return dni;
     }
 
     public void setDni(String dni) {
         this.dni = dni;
     }
 
+    public String getNaf() {
+        return naf;
+    }
+
     public void setNaf(String naf) {
         this.naf = naf;
+    }
+
+    public String getJobPosition() {
+        return jobPosition;
     }
 
     public void setJobPosition(String jobPosition) {
         this.jobPosition = jobPosition;
     }
 
-    public void setRetributiveGroup(char retributive_group) {
-        this.retributiveGroup = retributive_group;
+    public char getRetributiveGroup() {
+        return retributiveGroup;
     }
 
-    public void setEstablishmentCategory(char quotation_group) {
-        this.establishmentCategory = quotation_group;
+    public void setRetributiveGroup(char retributiveGroup) {
+        this.retributiveGroup = retributiveGroup;
+    }
+
+    public char getEstablishmentCategory() {
+        return establishmentCategory;
+    }
+
+    public void setEstablishmentCategory(char establishmentCategory) {
+        this.establishmentCategory = establishmentCategory;
+    }
+
+    public Date getHireDate() {
+        return hireDate;
+    }
+
+    public void setHireDate(Date hireDate) {
+        this.hireDate = hireDate;
     }
 }
