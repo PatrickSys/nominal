@@ -12,6 +12,7 @@ import java.util.List;
 
 @Repository
 public abstract class EmployeesRepo extends Repo<Employee>{
+
     @Autowired
     public final EmployeeQueries EmployeeQueries = new EmployeeQueries();
 
@@ -21,8 +22,25 @@ public abstract class EmployeesRepo extends Repo<Employee>{
     }
 
     //lists all the employees
-    public List<Employee> findAll() throws SQLException {
-        return super.findAll("employees");
+    public List<Employee> findAllEmployees() throws SQLException {
+        List<Employee> employees = super.findAll("employees");
+
+        addEmployeesPersonalData(employees);
+
+        return employees;
+    }
+
+    private void addEmployeesPersonalData(List<Employee> employees) throws SQLException {
+        for(Employee employee: employees){
+
+            String sqlName = "select name, second_name, phone, email from people where dni =\"" + employee.getDni() + "\"";
+            ResultSet resultSet = retrieveOneRow(sqlName);
+            employee.setName(resultSet.getString("name"));
+            employee.setSecondName(resultSet.getString("second_name"));
+            employee.setPhone(resultSet.getInt("phone"));
+            employee.setEmail(resultSet.getString("email"));
+
+        }
     }
 
     //Retrieves an employee given an id
