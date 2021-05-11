@@ -25,17 +25,20 @@ public abstract class EmployeesRepo extends Repo<Employee>{
     public List<Employee> findAllEmployees() throws SQLException {
         List<Employee> employees = super.findAll("employees");
 
-        addEmployeesNames(employees);
+        addEmployeesPersonalData(employees);
 
         return employees;
     }
 
-    private void addEmployeesNames(List<Employee> employees) throws SQLException {
+    private void addEmployeesPersonalData(List<Employee> employees) throws SQLException {
         for(Employee employee: employees){
 
-            String sqlName = "select name from people where dni =\"" + employee.getDni() + "\"";
+            String sqlName = "select name, second_name, phone, email from people where dni =\"" + employee.getDni() + "\"";
             ResultSet resultSet = retrieveOneRow(sqlName);
             employee.setName(resultSet.getString("name"));
+            employee.setSecondName(resultSet.getString("second_name"));
+            employee.setPhone(resultSet.getInt("phone"));
+            employee.setEmail(resultSet.getString("email"));
 
         }
     }
