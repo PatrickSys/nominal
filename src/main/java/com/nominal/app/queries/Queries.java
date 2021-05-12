@@ -25,6 +25,7 @@ public abstract class Queries {
 
     public ResultSet executeQuery(String sql) throws SQLException {
         Statement statement = connection.createStatement();
+
         return statement.executeQuery(sql);
     }
 

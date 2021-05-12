@@ -26,6 +26,7 @@ public abstract class EmployeesRepo extends Repo<Employee>{
         List<Employee> employees = super.findAll("employees");
 
         addEmployeesPersonalData(employees);
+        setEmployeesBaseSalary(employees);
 
         return employees;
     }
@@ -40,6 +41,16 @@ public abstract class EmployeesRepo extends Repo<Employee>{
             employee.setPhone(resultSet.getInt("phone"));
             employee.setEmail(resultSet.getString("email"));
 
+        }
+    }
+
+    public void setEmployeesBaseSalary(List<Employee> employees) throws  SQLException {
+
+        for (Employee employee : employees) {
+            String sql = "select base_salary from base_salaries where retributive_group='" + employee.getRetributiveGroup()
+                    + "' AND establishment_category='" + employee.getEstablishmentCategory() + "'";
+            ResultSet resultSet = retrieveOneRow(sql);
+            employee.setBaseSalary(resultSet.getInt("base_salary"));
         }
     }
 

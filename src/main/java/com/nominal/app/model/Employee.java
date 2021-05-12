@@ -23,6 +23,7 @@ public class Employee{
     char retributiveGroup;
     char establishmentCategory;
     Date hireDate;
+    double baseSalary;
 
 
 
@@ -137,5 +138,13 @@ public class Employee{
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public double getBaseSalary() {
+        return baseSalary;
+    }
+
+    public void setBaseSalary(double baseSalary) {
+        this.baseSalary = baseSalary;
     }
 }
