@@ -34,6 +34,7 @@ public class EmployeeQueries extends Queries{
     public Employee employeesFromQuery(int id) throws Exception {
         Employee employee = new Employee();
         String sql = "SELECT * FROM employees WHERE id = " + id;
+        System.err.println(sql);
         ResultSet resultSet = executeQuery(sql);
 
         if (resultSet.next()){

@@ -80,3 +80,4 @@ CREATE TABLE IF NOT EXISTS establishment_types(
     FOREIGN KEY (establishment_category) REFERENCES establishment_categories(id),
     establishment_type VARCHAR(70)
 )
+

@@ -1,6 +1,5 @@
 HELP.md
 target/
-DbConn.java
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
@@ -13,6 +12,7 @@ DbConn.java
 .settings
 .springBeans
 .sts4-cache
+
 
 ### IntelliJ IDEA ###
 .idea

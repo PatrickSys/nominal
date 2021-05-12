@@ -11,8 +11,7 @@ import java.sql.Statement;
  Made by        Nominal Team
  Date           06/05/2021
  Package        com.nominal.app
- Description:   Queries abstract class, has the connection instance and
-                some useful methods
+ Description:
  ************************************************************************/
 @Component
 public abstract class Queries {
@@ -29,7 +28,7 @@ public abstract class Queries {
         return statement.executeQuery(sql);
     }
 
-    // Retrieves only one row from a query, for instance if we want to get one employee
+    // as an id shall be unique it only returns a single value
     public ResultSet retrieveOneRow(String sql) throws SQLException {
 
 

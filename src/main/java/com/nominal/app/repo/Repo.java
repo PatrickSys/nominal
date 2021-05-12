@@ -2,7 +2,7 @@ package com.nominal.app.repo;
 
 import com.nominal.app.mapper.Mapper;
 import com.nominal.app.queries.Queries;
-import com.nominal.app.Regex;
+import com.nominal.app.template.Regex;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.sql.ResultSet;
@@ -21,6 +21,7 @@ public abstract class Repo <T> extends Queries {
 
     @Autowired
     Mapper<T> mapper;
+    //@Autowired  private final DbConn dbConn = new DbConn();
 
     @Autowired
     protected Repo() throws Exception {

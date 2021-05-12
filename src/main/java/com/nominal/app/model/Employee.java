@@ -22,8 +22,8 @@ public class Employee{
     String jobPosition;
     char retributiveGroup;
     char establishmentCategory;
-    Date hireDate;
     double baseSalary;
+    Date hireDate;
 
 
 
@@ -111,8 +111,8 @@ public class Employee{
         return hireDate;
     }
 
-    public void setHireDate(Date hireDate) {
-        this.hireDate = hireDate;
+    public void setHireDate(Date hire_date) {
+        this.hireDate = hire_date;
     }
 
 
