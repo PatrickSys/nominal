@@ -21,7 +21,7 @@ public class DbConn {
 
     public DbConn() throws Exception{
 
-        this.connection = DriverManager.getConnection("jdbc:mariadb://90.162.223.55:3306/nominal", "patrickdb", "nominalpatrick");
+        this.connection = DriverManager.getConnection("jdbc:mariadb://90.162.223.55:3306/nominal", "rodrigodb", "rodrigotontito");
 
     }
 

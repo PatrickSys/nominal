@@ -51,7 +51,7 @@ public abstract class EmployeesRepo extends Repo<Employee>{
 
     //gets the employee retributive group given it's job position name, then adds the employee to our database
     public Employee addEmployee(Employee employee) throws Exception {
-        employee.setRetributiveGroup(getRetributiveGroupByJobName(employee.getJobPosition()));
+        employee.setRetributiveGroup(getRetributiveGroupByJobName(employee.getJob_position()));
         return super.add(employee, "employees", "(dni, naf,  job_position, retributive_group, establishment_category, hire_date)", employee.toQueryInfo()  );
     }
 

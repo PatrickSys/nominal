@@ -57,6 +57,11 @@
             <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
         </dependency>-->
+        <dependency>
+            <groupId>net.sf.jasperreports</groupId>
+            <artifactId>jasperreports</artifactId>
+            <version>6.15.0</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -65,14 +70,14 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-            <plugin>
+            <!--<plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
                     <source>14</source>
                     <target>14</target>
                 </configuration>
-            </plugin>
+            </plugin>-->
         </plugins>
     </build>
 

@@ -19,10 +19,10 @@ public class Employee{
     int phone;
     String email;
     String naf;
-    String jobPosition;
+    String job_position;
     char retributiveGroup;
     char establishmentCategory;
-    Date hireDate;
+    Date hire_date;
 
 
 
@@ -31,10 +31,10 @@ public class Employee{
 
         return "\"" + dni + "\",\"" +
                 naf + "\",\"" +
-                jobPosition + "\"," + "'" +
+                job_position + "\"," + "'" +
                 retributiveGroup + "', " + "'" +
                 establishmentCategory + "',\"" +
-                hireDate + "\"";
+                hire_date + "\"";
     }
 
     @Override
@@ -43,10 +43,10 @@ public class Employee{
                 "ID=" + ID +
                 ", dni='" + dni + '\'' +
                 ", naf='" + naf + '\'' +
-                ", job_position ='" + jobPosition + '\'' +
+                ", job_position ='" + job_position + '\'' +
                 ", retributive_group='" + retributiveGroup + '\'' +
                 ", establishment_category=" + establishmentCategory +
-                ",hire_date=" + hireDate +
+                ",hire_date=" + hire_date +
                 '}';
     }
 
@@ -82,12 +82,12 @@ public class Employee{
         this.naf = naf;
     }
 
-    public String getJobPosition() {
-        return jobPosition;
+    public String getJob_position() {
+        return job_position;
     }
 
-    public void setJobPosition(String jobPosition) {
-        this.jobPosition = jobPosition;
+    public void setJob_position(String jobPosition) {
+        this.job_position = jobPosition;
     }
 
     public char getRetributiveGroup() {
@@ -106,12 +106,12 @@ public class Employee{
         this.establishmentCategory = establishmentCategory;
     }
 
-    public Date getHireDate() {
-        return hireDate;
+    public Date getHire_date() {
+        return hire_date;
     }
 
-    public void setHireDate(Date hireDate) {
-        this.hireDate = hireDate;
+    public void setHire_date(Date hire_date) {
+        this.hire_date = hire_date;
     }
 
 
