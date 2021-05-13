@@ -78,9 +78,9 @@ public class Payroll {
     //No salariales, exentas de contización
     double SSprestationsOrIndemnizations;
     double otherIndemnizations;
-    double indemnization1Name;
-    double indemnization2Name;
-    double indemnization3Name;
+    String indemnization1Name;
+    String indemnization2Name;
+    String indemnization3Name;
     double indemnization1Import;
     double indemnization2Import;
     double indemnization3Import;
@@ -259,15 +259,15 @@ public class Payroll {
         this.otherIndemnizations = otherIndemnizations;
     }
 
-    public void setIndemnization1Name(double indemnization1Name) {
+    public void setIndemnization1Name(String indemnization1Name) {
         this.indemnization1Name = indemnization1Name;
     }
 
-    public void setIndemnization2Name(double indemnization2Name) {
+    public void setIndemnization2Name(String indemnization2Name) {
         this.indemnization2Name = indemnization2Name;
     }
 
-    public void setIndemnization3Name(double indemnization3Name) {
+    public void setIndemnization3Name(String indemnization3Name) {
         this.indemnization3Name = indemnization3Name;
     }
 

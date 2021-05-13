@@ -1,7 +1,13 @@
 package com.nominal.app.queries;
 
+import com.nominal.app.mapper.CompanyMapper;
+import com.nominal.app.mapper.PayrollMapper;
+import com.nominal.app.model.Company;
+import com.nominal.app.model.Payroll;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import java.sql.ResultSet;
 
 /************************************************************************
  Made by        Nominal team
@@ -11,7 +17,23 @@ import org.springframework.stereotype.Component;
  ************************************************************************/
 
 @Component
-public class PayrollQueries {
+public class PayrollQueries extends Queries {
+    final PayrollMapper payrollmapper = new PayrollMapper();
 
+    public PayrollQueries() throws Exception {
+        super();
+    }
+
+    public Payroll payrollFromQuery(int id) throws Exception {
+        Payroll payroll = new Payroll();
+        String sql = "SELECT * FROM companies WHERE id = " + id;
+        System.err.println(sql);
+        ResultSet resultSet = executeQuery(sql);
+
+        if (resultSet.next()){
+            payroll =  payrollmapper.mapRow(resultSet);
+        }
+        return payroll;
+    }
 
 }

@@ -21,7 +21,7 @@ public class PayrollRepo extends Repo<Payroll> {
     }
 
     public Payroll findPayrollByID(int id ) throws Throwable {
-        return super.findById("payroll", "id",Integer.toString(id)).orElseThrow(() -> new NotFoundException("user by dni " + id + " was not found"));
+        return super.findById("payrolls", "id",Integer.toString(id)).orElseThrow(() -> new NotFoundException("user by dni " + id + " was not found"));
     }
 
 }

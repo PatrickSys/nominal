@@ -13,10 +13,7 @@ import org.springframework.util.ResourceUtils;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.sql.SQLException;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /************************************************************************ยบ
  Made by        Nominal Team
@@ -32,11 +29,11 @@ public class ReportService {
     private PayrollRepo payrollrepo;
 
     public String exportReport(String report, int id) throws Throwable {
-        List<Payroll> payroll = (List<Payroll>) payrollrepo.findPayrollByID(id);
+        Payroll payroll = payrollrepo.findPayrollByID(id);
         //Load file and compile
-        File f = ResourceUtils.getFile("classpath:nominal.jrxml");
+        File f = ResourceUtils.getFile("classpath:nomina.jrxml");
         JasperReport jr = JasperCompileManager.compileReport(f.getAbsolutePath());
-        JRBeanCollectionDataSource dataSource =  new JRBeanCollectionDataSource(payroll);
+        JRBeanCollectionDataSource dataSource =  new JRBeanCollectionDataSource((Collection<?>) payroll);
         Map<String,Object> m = new HashMap<>();
         m.put("NominalTeam","LRP");
         JasperPrint jp = JasperFillManager.fillReport(jr,m,dataSource);
