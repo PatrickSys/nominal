@@ -31,4 +31,4 @@ How to be able run our project step by step.
 
 4. Now you need to install JasperReports library, to do that go to [JasperReports Downloads](https://community.jaspersoft.com/community-download) and downlaod ```jasperreports-6.17.0.jar```, once Is downloaded add the library to the nominal project you just cloned in the step 3.
 
-5. Finally run the Nominal project in your IDE and with the terminal/cmd redirect to the folder where is located nominalWeb and execute ```ng serve```, Angular should start and you are good to test the website in ```http://localhost:4200/```
+5. Finally run the Nominal project  AppApplication class in your IDE and with the terminal/cmd redirect to the folder where is located nominalWeb and execute ```ng serve```, Angular should start and you are good to test the website in ```http://localhost:4200/```
