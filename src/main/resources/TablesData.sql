@@ -63,6 +63,8 @@ FOREIGN KEY (retributive_GROUP) REFERENCES retributive_groups(id),
 
 
 
+drop table payrolls;
+
 CREATE TABLE IF NOT EXISTS payrolls
 (
 	id INT AUTO_INCREMENT PRIMARY KEY,
@@ -95,23 +97,24 @@ CREATE TABLE IF NOT EXISTS payrolls
     complement_2_import double,
     complement_3_import double,
     complementary_hours_import double,
-	FOREIGN KEY (complements_id) REFERENCES complements(id),
-	ss_prestations_or_indemnitzations double,
+	ss_prestations_or_indemnizations double,
     indemnization_1_name varchar(40),
     indemnization_2_name varchar(40),
     indemnization_3_name varchar(40),
     indemnization_1_import double,
     indemnization_2_import double,
     indemnization_3_import double,
-	other_indemnitzations double,
+	other_indemnizations double,
 	other_salary_perceptions double,
 	common_contingencies double,
 	unemployement double,
 	professional_formation double,
     extraordinary_gratifications_import double,
     especie_salary_import double,
+    major_force_extra_hours_import double,
 	major_force_extra_hours_deductions double,
 	other_extra_hours_deductions double,
+    other_extra_hours_import  double,
 	irpf double,
 	total_aportations double,
 	anticipations double,

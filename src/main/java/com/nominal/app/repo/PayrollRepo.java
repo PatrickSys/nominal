@@ -4,9 +4,6 @@ import com.nominal.app.exceptions.NotFoundException;
 import com.nominal.app.model.Payroll;
 import org.springframework.stereotype.Repository;
 
-import java.sql.SQLException;
-import java.util.Optional;
-
 /************************************************************************ยบ
  Made by        Nominal Team
  Date           13/05/2021
