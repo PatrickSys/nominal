@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Simple_Blue_1" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0fe47522-2209-4cfa-959d-5669cf7ed639">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band/>
+	</background>
+	<pageHeader>
+		<band/>
+	</pageHeader>
+	<detail>
+		<band height="498">
+			<staticText>
+				<reportElement x="-1" y="0" width="281" height="70" uuid="be459af1-bb7f-4936-a773-5067d7828a0e"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<text><![CDATA[ Empresa:
+ Domicilio:
+ Localidad:
+ CIF:
+ CCC a la SS:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="286" y="0" width="270" height="70" uuid="03117dba-111e-432c-a17e-5ebda7bb9e45"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<text><![CDATA[ Trabajador:
+ NIF:
+ NAF:
+ Grupo profesional:
+ Grupo cotiz.:]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="80" y="10" width="189" height="1" uuid="0f05c7cf-82f2-433f-bf78-14ee177796f4"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="80" y="20" width="189" height="1" uuid="c802e4bc-ae52-4a67-9f98-3d7397b4d09b"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="80" y="30" width="189" height="1" uuid="78feba6a-6811-4045-ba8b-5667a88c5f75"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="80" y="40" width="189" height="1" uuid="2ebecb40-631a-48db-8cce-4ffe164fa7c8"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="80" y="50" width="189" height="1" uuid="14a29cd4-7826-4cfe-9d16-e9f2a1a67331"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="80" y="60" width="189" height="1" uuid="2ac2c528-a16b-41b4-99a1-11c012bd65dc"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="360" y="10" width="189" height="1" uuid="71739b0c-1ad6-4b73-bc27-aed4cb8ca3f2"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="360" y="20" width="189" height="1" uuid="eb8753d1-d929-41a4-a026-cafefd5f84d8"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="360" y="30" width="189" height="1" uuid="b913302a-988e-460d-9c6d-2eaf32ec4a1e"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="360" y="40" width="189" height="1" uuid="212ada7d-d6a9-4c35-ba33-6de5c65a6e59"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="360" y="50" width="189" height="1" uuid="43b5f8c1-6893-47e1-9568-158f2974249c"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="360" y="60" width="189" height="1" uuid="c4575a9c-cd60-4b4e-961b-8c009d50479d"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="80" width="555" height="21" uuid="d9091e26-41d2-43ee-a44d-f49bd290dee0"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<text><![CDATA[ Periodo de liquidación:	del ______ de ___________ al ______ de ______________ de ______ Total días: __________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="110" width="192" height="30" uuid="a27f40d8-f1a3-4e6b-9b8b-65c5ffc460a1"/>
+				<textElement>
+					<font fontName="Arial" size="20"/>
+				</textElement>
+				<text><![CDATA[I. Devengos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="140" width="281" height="21" uuid="44f35275-cfc3-40bd-acd8-9da2de06d800"/>
+				<text><![CDATA[1.- Percepciones salariales (Sujetas a cotización)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="160" width="291" height="30" uuid="9df6aba6-4b29-406f-9a46-06f040a2bde9"/>
+				<text><![CDATA[Salario base .........................................................................
+Complementos salarales:]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="10" y="200" width="270" height="1" uuid="8b27fa9e-afda-4702-854b-183ffebf7c8c"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="10" y="210" width="270" height="1" uuid="417128a1-a414-4557-ab04-dc7cc0cace4f"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="10" y="220" width="270" height="1" uuid="e5260bc9-72e7-4abf-885b-a508af17acc2"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="380" y="110" width="59" height="20" uuid="59adadd0-5a1f-4e2a-bdad-b41da0d2777a"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[IMPORTES]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="355" y="160" width="105" height="1" uuid="6eb77ba2-878b-442c-94a4-5d1862efa28b"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="355" y="200" width="105" height="1" uuid="97af99db-4964-4d12-aadf-c53a0c2888ff"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="355" y="209" width="105" height="1" uuid="55ff0a69-b6a9-4bd9-970a-0eaedfefac24"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="355" y="220" width="105" height="1" uuid="4e3b1075-d3df-4c7e-9377-251b040ebf82"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="230" width="291" height="70" uuid="bd0b1c33-5e48-4c29-9c8b-723b4119dfd4"/>
+				<text><![CDATA[Horas extras fuerza mayor.............................................................
+Horas extras resto..........................................................................
+Horas complementarias(contratos a tiempo parcial)......................
+Gratificaciones extraordinarias.......................................................
+Salario en especie..........................................................................]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="355" y="240" width="105" height="1" uuid="b64f9fd6-863d-4ce9-8a80-b074db45499e"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="355" y="250" width="105" height="1" uuid="548930a7-d212-4775-85c7-9dd7ccbc1508"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="355" y="260" width="105" height="1" uuid="648c42f1-f297-468c-8dce-d37d6c6bd8aa"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="355" y="270" width="105" height="1" uuid="45e9debb-ebaa-4e07-b967-a1de99849472"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="355" y="280" width="105" height="1" uuid="fd59ee28-15c9-4790-9c28-00ad9d43fd9f"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="355" y="290" width="105" height="1" uuid="52cba194-6b06-4ccd-b0c4-e97ab5e06dfe"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="310" width="281" height="21" uuid="64760c4f-4aa3-4009-ae7d-42ef1de44800"/>
+				<text><![CDATA[2.- Percepciones no salariales (Excluidas de cotización)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="330" width="281" height="20" uuid="1ed4c73e-b14d-4c48-9eeb-55a4f5c4dc78"/>
+				<text><![CDATA[Indemnizaciones o suplidos:]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="11" y="350" width="270" height="1" uuid="8ecc48c4-d29c-448f-beda-df5f08ea4801"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="11" y="360" width="270" height="1" uuid="a178d558-7139-4aa4-858c-fe258f8b8b4e"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="11" y="370" width="270" height="1" uuid="f7b8e7ce-65f5-414b-9613-4ceb1eded7cf"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="356" y="350" width="105" height="1" uuid="1a188eb6-1339-48fd-a402-2250b8ec180f"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="356" y="359" width="105" height="1" uuid="c04026c9-efac-4d8d-8a42-31d2a3c10848"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="356" y="370" width="105" height="1" uuid="d57f874e-45e0-4dfc-866f-a5aa367e1694"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="10" y="380" width="271" height="21" uuid="67f0598f-b26e-4b93-8499-71e8b187a03f"/>
+				<text><![CDATA[Prestaciones e indemnizaciones de la seguridad social:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="420" width="271" height="21" uuid="a5636e10-6a7a-4798-a57a-b4c780004ac6"/>
+				<text><![CDATA[Indemnizaciones por traslados, suspensiones o despidos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="460" width="271" height="21" uuid="675a5c8c-d60e-453c-b278-6ce28d11035a"/>
+				<text><![CDATA[Otras percepciones salariales:]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="10" y="410" width="270" height="1" uuid="4fdf89b9-b2cc-4b33-b364-1b1146fd60ec"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="355" y="410" width="105" height="1" uuid="7e03003c-4749-4003-8d2d-23171197e127"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="11" y="450" width="270" height="1" uuid="9a6b4032-ecd6-463d-ab88-27c2cb248b2b"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="356" y="450" width="105" height="1" uuid="d009d93a-a389-42e6-ba57-b41746d0cc6c"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="11" y="490" width="270" height="1" uuid="6a1220af-8ee4-4c5e-a336-80373b328dc0"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="356" y="490" width="105" height="1" uuid="83ef8ec7-675f-45c1-8163-2252d674788c"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="503">
+			<staticText>
+				<reportElement x="0" y="43" width="544" height="16" uuid="94e03e7c-73f5-402a-8483-106f1808f63b"/>
+				<text><![CDATA[1.Aportaciones del trabajador a las cotizaciones a la S.S y conceptos de recaudación conjunta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="63" width="200" height="74" uuid="5d6c494e-2005-4b95-af7d-4343198a87d5"/>
+				<text><![CDATA[Contingencias comunes............
+Desempleo................................
+Formación profesional...............
+Horas extras fuerza mayor........
+Horas extras resto.....................]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="180" y="73" width="59" height="1" uuid="4fac2b89-ae77-40ae-adfa-48177f475898"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="180" y="83" width="59" height="1" uuid="09d0f3e8-5ab9-427c-9e6e-1fe805efa160"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="180" y="93" width="59" height="1" uuid="6e72e688-3e57-4d39-a9e0-1cf842abd187"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="180" y="123" width="59" height="1" uuid="1b7942f6-1f2b-4eec-a712-25df5441118c"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="180" y="113" width="59" height="1" uuid="3ffcfe34-550e-4755-9aaf-e8e4c6b14bc6"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="180" y="103" width="59" height="1" uuid="d09fdc53-143f-46a6-8445-fa01917014c5"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="250" y="65" width="10" height="70" uuid="bc3413f2-8d21-4531-969b-d86c6dcc389f"/>
+				<text><![CDATA[%
+%
+%
+%
+%
+%]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="290" y="73" width="109" height="1" uuid="cc8aceb8-c938-4836-988b-fd80e0804604"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="290" y="83" width="109" height="1" uuid="447eb9a8-0b87-4733-aa2b-3a28f3b5f2e2"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="290" y="93" width="109" height="1" uuid="02f1be9e-3d55-4913-8879-115a9567ca11"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="290" y="103" width="109" height="1" uuid="9f308f12-8162-483d-929d-513e4754a2e4"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="290" y="113" width="109" height="1" uuid="59adae4b-2e1a-47b7-b5ae-e204fdae2862"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="290" y="123" width="109" height="1" uuid="f358c0f8-0cc2-49e5-a48d-ab651033ec02"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="60" y="133" width="200" height="20" uuid="3d1fcc43-a43b-4a70-babf-6fd08dedb2bb"/>
+				<text><![CDATA[TOTAL APORTACIONES............................]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="399" y="143" width="109" height="1" uuid="ce598590-8ead-47c9-8efe-9e0c54831a77"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="153" width="230" height="16" uuid="fd920d99-a639-495e-aa73-9c1a53e053b3"/>
+				<text><![CDATA[2. Impuesto sobre la renta de las personas físicas]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="243" y="163" width="47" height="1" uuid="e0947e23-3862-49f8-8719-9c1563a236f0"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="290" y="151" width="20" height="20" uuid="2facca22-1936-47bf-9a15-2cfe893c756b"/>
+				<text><![CDATA[%]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="399" y="161" width="109" height="1" uuid="8c9a1a99-2f9f-4f38-ae77-28961a796b74"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="173" width="270" height="16" uuid="4f7d72c6-13b3-4a9f-b856-a0d1ce536d4a"/>
+				<text><![CDATA[3. Anticipos....................................................................]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="399" y="181" width="109" height="1" uuid="4e019fb1-2a08-4e2d-89b7-246c5f4a71e7"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="193" width="270" height="16" uuid="bf2223cb-2e45-4019-8dde-2537a74055f2"/>
+				<text><![CDATA[4. Valor de los productos recibidos en especie..............]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="398" y="201" width="109" height="1" uuid="fbdbd7d6-af6c-4112-ae7a-1c47c15f14a9"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="209" width="270" height="16" uuid="ac8b6931-4863-4ec4-baef-a07e79333821"/>
+				<text><![CDATA[5. Otras deducciones]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="229" width="250" height="14" uuid="f60c1838-d376-4791-95fc-83547eb6ba83"/>
+				<textElement>
+					<font fontName="Arial Black" size="8"/>
+				</textElement>
+				<text><![CDATA[B. Total a deducir...................................]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="446" y="236" width="109" height="1" uuid="1060f992-1931-4d82-a369-d931a7d75c80"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="-22" y="10" width="595" height="1" uuid="40cd01eb-e0a5-4f44-a5c4-6dd381b0122b"/>
+				<graphicElement>
+					<pen lineWidth="0.1"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="140" y="253" width="250" height="14" uuid="ca167690-3fc5-4879-96cb-93ccc940617a"/>
+				<textElement>
+					<font fontName="Arial Black" size="8"/>
+				</textElement>
+				<text><![CDATA[B. LIQUIDO TOTAL A PERCIBIR (A-B) ...................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="253" width="50" height="30" uuid="bff3cf00-420a-4888-bd9f-889419701207"/>
+				<text><![CDATA[Firma y sello
+de la empresa]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="140" y="293" width="109" height="1" uuid="213f4cd9-50a2-4516-b236-37a4e7427942"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="260" y="283" width="30" height="16" uuid="4ca43943-38f1-4739-a029-32a67ce3fa04"/>
+				<text><![CDATA[de]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="280" y="293" width="109" height="1" uuid="ff3037b6-09b1-4ac5-96e5-32d324082e8f"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="430" y="293" width="39" height="1" uuid="8c7c9b01-53f1-4fb2-9ad9-4164814327cf"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="398" y="283" width="30" height="16" uuid="a6ff3d21-1d45-487a-85dc-068c9412fefa"/>
+				<text><![CDATA[de]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="313" width="555" height="1" uuid="a5a83df7-f52b-49de-b530-5c1737ef9df6"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="314" width="544" height="16" uuid="f7725eb7-494e-4a9c-a2cf-38c97e3f2629"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[DETERMINACION DE LAS BASES DE COTIZA ALA S.S Y CONCEPTOS DE RECAUDACION Y DE LA BASE SUJETA A RETENCION DEL IRPF:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-1" y="332" width="289" height="21" uuid="a433f3c2-24ed-4da4-88e8-f081c0fc7f21"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[1. Base de cotización por contingencias comunes:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="353" width="289" height="39" uuid="8ea88da2-af73-40d7-8d43-927bf7ecee7b"/>
+				<textElement>
+					<font size="10" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Remuneración mensual sujeta a cotización........
+Prorrata pagas extras..........................................
+				TOTAL....................]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="280" y="363" width="59" height="1" uuid="825f60cc-4b4c-49df-a4e7-de87b26047c9"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="280" y="373" width="59" height="1" uuid="dfd19d55-9467-4eab-9393-fb10586308cc"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="280" y="391" width="59" height="1" uuid="7ccb5c16-40b2-4a32-9ab3-7fa9106138b1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="350" y="386" width="30" height="11" uuid="498d2f79-261d-45c1-848f-486210939381"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[BCCC
+]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="380" y="391" width="59" height="1" uuid="58bc565c-d820-49c8-8d40-d2567a85af01"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="280" y="428" width="59" height="1" uuid="4527c123-bf37-4d18-860a-25bff3e94113"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="350" y="423" width="30" height="11" uuid="05bcce24-305e-4c26-aa41-0a7c09313f11"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[BCCP
+]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="380" y="428" width="59" height="1" uuid="e6b7f143-39cb-4e9c-9101-44a2f0eebe3f"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="397" width="119" height="36" uuid="61271dbf-56a3-43f9-948d-f5fbadd7abe8"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[2. Base de cotización
+Conting. Profesionales]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="160" y="391" width="1" height="61" uuid="01f16d7f-be05-4ef5-8194-cebada454552"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="171" y="403" width="148" height="69" uuid="186d3e08-30ab-4ea5-b92d-fef9f885e0ea"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[AT y EP (Aportación empresa)
+Desempleo..........................
+Formación profesional........
+Fondo garantía social........
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="394" y="343" width="30" height="11" uuid="a9b8ca1b-1a5d-41a9-9d6c-58cb32b3c0de"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[BASE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="343" width="30" height="11" uuid="1466335b-bee6-43fa-b662-864db1a52745"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[TIPO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="508" y="344" width="59" height="30" uuid="365a596a-44d6-4de6-b02a-fb43516e5ee8"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[APORTACIÓN
+EMPRESA]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="490" y="390" width="76" height="1" uuid="14bf56bf-0675-499b-8ba4-8df2e44ef5a3"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="490" y="397" width="76" height="1" uuid="8da9453b-721b-447c-b21c-237137ef2551"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="490" y="406" width="76" height="1" uuid="f42c1447-c2b5-4b77-bbe9-e43d4b15b08f"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="490" y="413" width="76" height="1" uuid="504f6e9a-6613-400d-99cc-292a98b48a9b"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="490" y="421" width="76" height="1" uuid="e873bb53-8baa-4163-974c-0eb75de1bcc2"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="490" y="428" width="76" height="1" uuid="c81cca72-f71c-4036-9f2d-1ba5d8a09474"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="490" y="437" width="76" height="1" uuid="46459077-6058-445e-9a21-f19e8e028bc9"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="453" width="280" height="50" uuid="f2e44093-dc99-4cf0-a0bc-f7ac9329aeb9"/>
+				<text><![CDATA[3. Base de cotización horas extras fuerza mayor..........
+4. Base de cotización horas extras resto.......................
+5. Base sujeta a retención del I.R.P.F...........................
+]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="280" y="463" width="59" height="1" uuid="7bb7e1bb-a7ac-429e-9b48-f01d194111c2"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="280" y="472" width="59" height="1" uuid="616c63cc-0329-4192-8290-bebf8e934865"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="280" y="483" width="59" height="1" uuid="027f6593-0230-40f6-a8b3-ce065c5f6492"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="470" y="385" width="10" height="11" uuid="f6a57763-9754-40f2-8e02-e521a0508185"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="470" y="392" width="10" height="11" uuid="fce89fe2-e31e-449f-874e-f4e233a605d2"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="470" y="401" width="10" height="11" uuid="81aa4f1e-31e4-43d0-8265-3c2547d2ff48"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="446" y="255" width="110" height="10" uuid="c96813af-77f2-491e-9d9c-7aef4ad2d3a7"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</frame>
+			<staticText>
+				<reportElement x="319" y="299" width="40" height="14" uuid="bb112d50-f449-4c10-9e1b-a3b849a3ba9a"/>
+				<textElement markup="none">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[RECIBI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="10" width="192" height="30" uuid="6804dbaf-a4fe-4013-b7d7-cc9d0853c8d3"/>
+				<textElement>
+					<font fontName="Arial" size="20"/>
+				</textElement>
+				<text><![CDATA[II. Deducciones]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="32" width="555" height="1" uuid="e725d808-ea11-40dd-8f4c-315fb6aef8bb"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band/>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
