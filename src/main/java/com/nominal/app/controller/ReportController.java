@@ -25,8 +25,8 @@ public class ReportController {
     @Autowired
     ReportService reportservice;
 
-    @GetMapping("/{format}")
-    public String generateReport(@PathVariable String format) throws FileNotFoundException, SQLException, JRException {
-        return reportservice.exportReport(format);
+    @GetMapping("/{format}/{id}")
+    public String generateReport(@PathVariable String format, @PathVariable int id) throws Throwable {
+        return reportservice.exportReport(format, id);
     }
 }
