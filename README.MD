@@ -25,7 +25,7 @@ How to be able run our project step by step.
 
 1. First of all you need an IDE and preferably Java 16jdk, you can download any java jdk from the [official website](https://www.oracle.com/es/java/technologies/javase-downloads.html)
 
-2. Once you have a favorite IDE and java installed, the next step is to download NodeJS and Angular CLI. For NodeJS you can go to the [official website](https://nodejs.org/es/download/) and download the version we previosly mentioned. Once NodeJS is installed, open the terminal/cmd and install Angular with this command ``` npm install -g @angular/cli ```
+2. Once you have a favorite IDE and java installed, the next step is to download NodeJS and Angular CLI. For NodeJS you can go to the [official website](https://nodejs.org/es/download/) and download the version we previosly mentioned. Once NodeJS is installed, open the terminal/cmd and install Angular with this command ``` npm install -g @angular/cli ```  ```npm i @angular/common``` and ```npm i @angular/core```
 
 3. Next step is clone our project nominal and [NominalWeb](https://github.com/LMatass/nominalWeb), once you have it, go to the nominal/src/main/java/DbConn and modify the IP, username and password if needed ().
 
