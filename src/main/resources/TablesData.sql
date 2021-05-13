@@ -66,6 +66,8 @@ FOREIGN KEY (retributive_GROUP) REFERENCES retributive_groups(id),
 CREATE TABLE IF NOT EXISTS payrolls
 (
 	id INT AUTO_INCREMENT PRIMARY KEY,
+	company_id INT,
+	FOREIGN KEY  (company_id) REFERENCES companies(id),
 	cif VARCHAR(9),
 	company_name VARCHAR(80),
 	company_address VARCHAR(100),
