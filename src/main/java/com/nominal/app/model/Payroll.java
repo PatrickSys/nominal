@@ -78,9 +78,9 @@ public class Payroll {
     //No salariales, exentas de contización
     double SSprestationsOrIndemnizations;
     double otherIndemnizations;
-    double indemnization1Name;
-    double indemnization2Name;
-    double indemnization3Name;
+    String indemnization1Name;
+    String indemnization2Name;
+    String indemnization3Name;
     double indemnization1Import;
     double indemnization2Import;
     double indemnization3Import;
@@ -259,16 +259,269 @@ public class Payroll {
         this.otherIndemnizations = otherIndemnizations;
     }
 
-    public void setIndemnization1Name(double indemnization1Name) {
+
+    public int getId() {
+        return id;
+    }
+
+    public int getCompanyId() {
+        return companyId;
+    }
+
+    public String getCompanyName() {
+        return companyName;
+    }
+
+    public String getCompanyAddress() {
+        return companyAddress;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public String getCif() {
+        return cif;
+    }
+
+    public String getCcc() {
+        return ccc;
+    }
+
+    public int getEmployeeId() {
+        return employeeId;
+    }
+
+    public String getEmployeeName() {
+        return employeeName;
+    }
+
+    public String getEmployeeSecondName() {
+        return employeeSecondName;
+    }
+
+    public String getEmployeeLastName() {
+        return employeeLastName;
+    }
+
+    public String getNif() {
+        return nif;
+    }
+
+    public String getNaf() {
+        return naf;
+    }
+
+    public String getJobPosition() {
+        return jobPosition;
+    }
+
+    public char getRetributiveGroup() {
+        return retributiveGroup;
+    }
+
+    public int getEstablishmentCategory() {
+        return establishmentCategory;
+    }
+
+    public Date getStartDate() {
+        return startDate;
+    }
+
+    public Date getEndDate() {
+        return endDate;
+    }
+
+    public int getDateDiff() {
+        return dateDiff;
+    }
+
+    public double getBaseSalary() {
+        return baseSalary;
+    }
+
+    public double getTotalComplements() {
+        return totalComplements;
+    }
+
+    public String getComplement1Name() {
+        return complement1Name;
+    }
+
+    public String getComplement2Name() {
+        return complement2Name;
+    }
+
+    public String getComplement3Name() {
+        return complement3Name;
+    }
+
+    public double getComplement1Import() {
+        return complement1Import;
+    }
+
+    public double getComplement2Import() {
+        return complement2Import;
+    }
+
+    public double getComplement3Import() {
+        return complement3Import;
+    }
+
+    public double getTotalIndemnizations() {
+        return totalIndemnizations;
+    }
+
+    public double getMajorForceExtraHoursImport() {
+        return majorForceExtraHoursImport;
+    }
+
+    public double getOtherExtraHoursImport() {
+        return otherExtraHoursImport;
+    }
+
+    public double getComplementaryHoursImport() {
+        return complementaryHoursImport;
+    }
+
+    public double getExtraordinaryGratificationsImport() {
+        return extraordinaryGratificationsImport;
+    }
+
+    public double getEspecieSalaryImport() {
+        return especieSalaryImport;
+    }
+
+    public double getSSprestationsOrIndemnizations() {
+        return SSprestationsOrIndemnizations;
+    }
+
+    public double getOtherIndemnizations() {
+        return otherIndemnizations;
+    }
+
+    public String getIndemnization1Name() {
+        return indemnization1Name;
+    }
+
+    public void setIndemnization1Name(String indemnization1Name) {
         this.indemnization1Name = indemnization1Name;
     }
 
-    public void setIndemnization2Name(double indemnization2Name) {
+    public String getIndemnization2Name() {
+        return indemnization2Name;
+    }
+
+    public void setIndemnization2Name(String indemnization2Name) {
         this.indemnization2Name = indemnization2Name;
     }
 
-    public void setIndemnization3Name(double indemnization3Name) {
+    public String getIndemnization3Name() {
+        return indemnization3Name;
+    }
+
+    public void setIndemnization3Name(String indemnization3Name) {
         this.indemnization3Name = indemnization3Name;
+    }
+
+    public double getIndemnization1Import() {
+        return indemnization1Import;
+    }
+
+    public double getIndemnization2Import() {
+        return indemnization2Import;
+    }
+
+    public double getIndemnization3Import() {
+        return indemnization3Import;
+    }
+
+    public double getOtherSalaryPerceptions() {
+        return otherSalaryPerceptions;
+    }
+
+    public double getTotalDeventions() {
+        return totalDeventions;
+    }
+
+    public double getTotalNonSalarialPerceptions() {
+        return totalNonSalarialPerceptions;
+    }
+
+    public double getCommonContingenciesPercent() {
+        return commonContingenciesPercent;
+    }
+
+    public double getUnemployementPercent() {
+        return unemployementPercent;
+    }
+
+    public double getProfessionalFormationPercent() {
+        return professionalFormationPercent;
+    }
+
+    public double getMajorForceExtraHoursPercent() {
+        return majorForceExtraHoursPercent;
+    }
+
+    public double getOtherExtraHoursPercent() {
+        return otherExtraHoursPercent;
+    }
+
+    public double getIrpfPercent() {
+        return irpfPercent;
+    }
+
+    public double getCommonContingenciesDeduction() {
+        return commonContingenciesDeduction;
+    }
+
+    public double getUnemployementDeduction() {
+        return unemployementDeduction;
+    }
+
+    public double getProfessionalFormationDeduction() {
+        return professionalFormationDeduction;
+    }
+
+    public double getMajorForceExtraHoursDeduction() {
+        return majorForceExtraHoursDeduction;
+    }
+
+    public double getOtherExtraHoursDeduction() {
+        return otherExtraHoursDeduction;
+    }
+
+    public double getIrpfDeduction() {
+        return irpfDeduction;
+    }
+
+    public double getTotalAportations() {
+        return totalAportations;
+    }
+
+    public double getAnticipations() {
+        return anticipations;
+    }
+
+    public double getEspecieProductsValue() {
+        return especieProductsValue;
+    }
+
+    public double getOtherDeductions() {
+        return otherDeductions;
+    }
+
+    public double getTotalDeductions() {
+        return totalDeductions;
+    }
+
+    public double getNetSalary() {
+        return netSalary;
+    }
+
+    public double getBruteSalary() {
+        return bruteSalary;
     }
 
     public void setIndemnization1Import(double indemnization1Import) {
