@@ -34,10 +34,11 @@ public abstract class EmployeesRepo extends Repo<Employee>{
     private void addEmployeesPersonalData(List<Employee> employees) throws SQLException {
         for(Employee employee: employees){
 
-            String sqlName = "select name, second_name, phone, email from people where dni =\"" + employee.getDni() + "\"";
+            String sqlName = "select name, second_name, last_name, phone, email from people where dni =\"" + employee.getDni() + "\"";
             ResultSet resultSet = retrieveOneRow(sqlName);
             employee.setName(resultSet.getString("name"));
             employee.setSecondName(resultSet.getString("second_name"));
+            employee.setLastName(resultSet.getString("last_name"));
             employee.setPhone(resultSet.getInt("phone"));
             employee.setEmail(resultSet.getString("email"));
 

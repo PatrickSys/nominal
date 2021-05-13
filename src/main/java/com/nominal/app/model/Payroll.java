@@ -1,7 +1,6 @@
 package com.nominal.app.model;
 
 import java.sql.Date;
-import java.util.List;
 
 /************************************************************************
  Made by        Nominal team
@@ -19,6 +18,7 @@ public class Payroll {
     /**
      * Empresa
      */
+	int ID;
     String companyName;
     String companyAddress;
     String city;
@@ -27,6 +27,7 @@ public class Payroll {
     /**
      * Empleado
      */
+    int employeeId;
     String employeeName;
     String NIF;
     String NAF;
@@ -47,19 +48,18 @@ public class Payroll {
 
     //Percepciones salariales (sujetas a cotización)
     double baseSalary;
-    List<String> complementsNames;
-    List<Double> complementsImports;
+    double totalClompements;
+	double totalIndemnizations;
     double majorForceExtraHours;
-    double restExtraHours;
+    double otherExtraHours;
     double complementaryHours;
     double extraordinaryGratifications;
     double especieSalary;
+    double totalDeventions;
 
     //No salariales, exentas de contización
-    List<String> indemnitzationNames;
-    List<Double> indemnitzationImports;
-    double SSprestationsOrIndemnitzations;
-    double otherIndemnitzations;
+    double SSprestationsOrIndemnizations;
+    double otherIndemnizations;
 
     double otherSalaryPerceptions;
 
@@ -70,7 +70,7 @@ public class Payroll {
     // these are %
     double commonContingencies;
     double unemployement;
-    double professionalformation;
+    double professionalFormation;
     double majorForceExtraHoursDeductions;
     double otherExtraHoursDeductions;
     double irpf;
@@ -86,7 +86,7 @@ public class Payroll {
      * Neto
      */
     double netSalary;
-
+    double bruteSalary;
 
 
 }

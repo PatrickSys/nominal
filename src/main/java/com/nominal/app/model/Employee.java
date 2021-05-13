@@ -16,6 +16,7 @@ public class Employee{
     String dni;
     String name;
     String secondName;
+    String lastName;
     int phone;
     String email;
     String naf;
@@ -146,5 +147,13 @@ public class Employee{
 
     public void setBaseSalary(double baseSalary) {
         this.baseSalary = baseSalary;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 }

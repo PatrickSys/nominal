@@ -21,7 +21,6 @@ public abstract class Repo <T> extends Queries {
 
     @Autowired
     Mapper<T> mapper;
-    //@Autowired  private final DbConn dbConn = new DbConn();
 
     @Autowired
     protected Repo() throws Exception {
