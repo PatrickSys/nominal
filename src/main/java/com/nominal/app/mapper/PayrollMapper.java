@@ -33,7 +33,7 @@ public class PayrollMapper implements Mapper<Payroll> {
         payroll.setNaf(resultSet.getString("naf"));
         payroll.setJobPosition(resultSet.getString("job_position"));
         payroll.setRetributiveGroup(resultSet.getString("retributive_group").charAt(0));
-        payroll.setEstablishmentCategory(resultSet.getInt("establishment_category"));
+        payroll.setEstablishmentCategory(resultSet.getString("establishment_category").charAt(0));
         payroll.setStartDate(resultSet.getDate("start_date"));
         payroll.setEndDate(resultSet.getDate("end_date"));
         payroll.setDateDiff(resultSet.getInt("datediff"));

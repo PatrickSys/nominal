@@ -33,10 +33,10 @@ public class FolQueries extends Queries {
         List<String> monthlyPayment = getMonthlyPayment();
 
         insertConvention();
-        insertEstablishmentCategories(allEstablishmentCategories);
-        insertEstablishment_types(allEstablishmentCategories);
-        insertRetributiveGroups(allRetributionGroups);
-        insertJobPositions(allRetributionGroups);
+        //insertEstablishmentCategories(allEstablishmentCategories);
+        //insertEstablishment_types(allEstablishmentCategories);
+        //insertRetributiveGroups(allRetributionGroups);
+        //insertJobPositions(allRetributionGroups);
         insertBaseSalaries( allEstablishmentCategories, allRetributionGroups);
         insertEstablishment_types(allEstablishmentCategories);
 
@@ -162,7 +162,7 @@ public class FolQueries extends Queries {
 
 
         String convention = "insert into conventions VALUES( \"8612062018\") ";
-        executeQuery(convention);
+        //executeQuery(convention);
 
     }
     /**

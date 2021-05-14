@@ -18,6 +18,7 @@ public class CompanyMapper implements Mapper<Company> {
     @Override
     public Company mapRow(ResultSet resultSet) throws SQLException {
         Company company = new Company();
+        company.setId(resultSet.getInt("id"));
         company.setCIF(resultSet.getString("cif"));
         company.setName(resultSet.getString("name"));
         company.setAddress(resultSet.getString("address"));

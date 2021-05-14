@@ -11,7 +11,7 @@ public class EmployeeMapper implements Mapper<Employee>{
     @Override
     public Employee mapRow(ResultSet resultSet) throws SQLException {
         Employee employee = new Employee();
-        employee.setDni(resultSet.getString("dni"));
+        employee.setNif(resultSet.getString("nif"));
         employee.setID(resultSet.getInt("id"));
         employee.setNaf(resultSet.getString("naf"));
         employee.setJobPosition(resultSet.getString("job_position"));

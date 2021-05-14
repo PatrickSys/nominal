@@ -13,7 +13,7 @@ public class Employee{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, updatable = false)
     int ID;
-    String dni;
+    String nif;
     String name;
     String secondName;
     String lastName;
@@ -31,7 +31,7 @@ public class Employee{
     // gets info from a Employee to be used in a query
     public String toQueryInfo(){
 
-        return "\"" + dni + "\",\"" +
+        return "\"" + nif + "\",\"" +
                 naf + "\",\"" +
                 jobPosition + "\"," + "'" +
                 retributiveGroup + "', " + "'" +
@@ -43,7 +43,7 @@ public class Employee{
     public String toString() {
         return "Employee{" +
                 "ID=" + ID +
-                ", dni='" + dni + '\'' +
+                ", dni='" + nif + '\'' +
                 ", naf='" + naf + '\'' +
                 ", job_position ='" + jobPosition + '\'' +
                 ", retributive_group='" + retributiveGroup + '\'' +
@@ -60,12 +60,12 @@ public class Employee{
         this.ID = ID;
     }
 
-    public String getDni() {
-        return dni;
+    public String getNif() {
+        return nif;
     }
 
-    public void setDni(String dni) {
-        this.dni = dni;
+    public void setNif(String dni) {
+        this.nif = dni;
     }
 
     public String getName() {

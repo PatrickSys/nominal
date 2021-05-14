@@ -45,8 +45,16 @@ public class Payroll {
     String naf;
     String jobPosition;
     char retributiveGroup;
-    int establishmentCategory;
+    char establishmentCategory;
 
+
+    public char getEstablishmentCategory() {
+        return establishmentCategory;
+    }
+
+    public void setEstablishmentCategory(char establishmentCategory) {
+        this.establishmentCategory = establishmentCategory;
+    }
 
     /**
      * Periodo liquidación
@@ -181,9 +189,7 @@ public class Payroll {
         this.retributiveGroup = retributiveGroup;
     }
 
-    public void setEstablishmentCategory(int establishmentCategory) {
-        this.establishmentCategory = establishmentCategory;
-    }
+
 
     public void setStartDate(Date startDate) {
         this.startDate = startDate;
@@ -322,9 +328,6 @@ public class Payroll {
         return retributiveGroup;
     }
 
-    public int getEstablishmentCategory() {
-        return establishmentCategory;
-    }
 
     public Date getStartDate() {
         return startDate;
@@ -627,8 +630,9 @@ public class Payroll {
     }
 
     public String toQueryInfo() {
+
         return
-                "default" + "," + companyId +
+               companyId +
                 ", \"" + cif + '\"' +
                 ", \"" + companyName + '\"' +
                 ", \"" + companyAddress + '\"' +

@@ -41,6 +41,7 @@ public class PayrollController {
 
     @PostMapping("/add")
     public ResponseEntity<Payroll> addPayroll(@RequestBody Payroll payroll) throws SQLException {
+
         Payroll addedPayroll = payrollService.addPayroll(payroll);
         return new ResponseEntity<>(addedPayroll, HttpStatus.CREATED);
     }

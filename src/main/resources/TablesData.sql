@@ -19,11 +19,13 @@ CREATE TABLE IF NOT EXISTS job_positions(
       FOREIGN KEY (retributive_group) REFERENCES retributive_groups(id),
       job_position_name VARCHAR(80) UNIQUE
 );
+
+DROP TABLE IF EXISTS  employees;
 CREATE TABLE IF NOT EXISTS employees
 (
     id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-    dni CHAR(9) NOT NULL UNIQUE,
-    FOREIGN KEY (dni) REFERENCES people(dni) ON UPDATE CASCADE ON DELETE CASCADE,
+    nif CHAR(9) NOT NULL UNIQUE,
+    FOREIGN KEY (nif) REFERENCES people(nif) ON UPDATE CASCADE ON DELETE CASCADE,
     naf VARCHAR (14) UNIQUE,
     job_position VARCHAR(80),
     retributive_group SET('1','2','3','4','5','6') NOT NULL,
@@ -35,9 +37,23 @@ CREATE TABLE IF NOT EXISTS employees
 );
 
 
+INSERT INTO payrolls (company_id, cif, company_name,company_address, city, ccc, employee_id, employee_name, employee_second_name,
+                employee_last_name, nif, naf, job_position,retributive_group, establishment_category,start_date, end_date, datediff, complement_1_name,
+                      complement_2_name, complement_3_name, complement_1_import, complement_2_import, complement_3_import, complementary_hours_import,
+                      ss_prestations_or_indemnizations, indemnization_1_name, indemnization_2_name, indemnization_3_name, indemnization_1_import,
+                      indemnization_1_import, indemnization_2_import, indemnization_3_import, other_indemnizations, other_salary_perceptions,
+                      extraordinary_gratifications_import, especie_salary_import, major_force_extra_hours_import, major_force_extra_hours_deduction,
+                      other_extra_hours_deduction, other_extra_hours_import, total_aportations, anticipations, especie_products_value,
+                      other_deductions, total_deductions, net_salary, common_contingencies_percent, unemployement_percent, professional_formation_percent,
+                      major_force_extra_hours_percent, other_extra_hours_percent, irpf_percent, common_contingencies_deduction,
+                      unemployement_deduction, professional_formation_deduction, other_extra_hours_deduction, irpf_deduction, brute_salary);
+
+
+
+
 
 CREATE TABLE IF NOT EXISTS people(
-        dni CHAR(9) PRIMARY KEY NOT NULL,
+        nif CHAR(9) PRIMARY KEY NOT NULL,
         yob YEAR NOT NULL,
         name VARCHAR(15) NOT  NULL,
         second_name VARCHAR(20) NOT NULL,
