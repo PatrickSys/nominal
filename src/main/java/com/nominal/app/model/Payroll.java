@@ -48,6 +48,14 @@ public class Payroll {
     char establishmentCategory;
 
 
+    public Payroll(int id) {
+        this.id = id;
+    }
+
+    public Payroll() {
+
+    }
+
     public char getEstablishmentCategory() {
         return establishmentCategory;
     }

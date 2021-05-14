@@ -26,7 +26,7 @@ public class PayrollQueries extends Queries{
         }
 
         public Payroll payrollFromQuery(int id) throws Exception {
-            Payroll payroll = new Payroll();
+            Payroll payroll = new Payroll(id);
             String sql = "SELECT * FROM companies WHERE id = " + id;
             System.err.println(sql);
             ResultSet resultSet;

@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/report")
 public class ReportController {
 
+
     @Autowired
     ReportService reportService;
 
@@ -25,6 +26,7 @@ public class ReportController {
     public String generateReport(@PathVariable String format, @PathVariable int id) throws Throwable {
         return reportService.exportReport(format, id);
     }
+
 
 
 }

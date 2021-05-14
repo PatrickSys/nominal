@@ -69,7 +69,7 @@ public abstract class EmployeesRepo extends Repo<Employee>{
 
     //updates an employee given the id value
     public Employee updateEmployee(Employee employee) throws SQLException{
-        return super.update(employee, "employee", "id", Integer.toString(employee.getID()));
+        return super.update(employee, "employees", "id", Integer.toString(employee.getID()));
     }
 
     //gets the employee id value to further delete it on the database
