@@ -626,6 +626,73 @@ public class Payroll {
         this.bruteSalary = bruteSalary;
     }
 
+    public String toQueryInfo() {
+        return
+                "default" + "," + companyId +
+                ", \"" + cif + '\"' +
+                ", \"" + companyName + '\"' +
+                ", \"" + companyAddress + '\"' +
+                ", \"" + city + '\"' +
+                ", \"" + ccc + '\"' +
+                ", " + employeeId +
+                ", \"" + employeeName + '\"' +
+                ", \"" + employeeSecondName + '\"' +
+                ", \"" + employeeLastName + '\"' +
+                ", \"" + nif + '\"' +
+                ", \"" + naf + '\"' +
+                ", \"" + jobPosition + '\"' +
+                ", '" + retributiveGroup +
+                "', '" + establishmentCategory +
+                "', \"" + startDate +
+                "\",\"" + endDate +
+                "\", " + dateDiff +
+                ", " + baseSalary +
+                ", \"" + complement1Name + '\"' +
+                ", \"" + complement2Name + '\"' +
+                ", \"" + complement3Name + '\"' +
+                ", " + complement1Import +
+                ", " + complement2Import +
+                ", " + complement3Import +
+                ", " + complementaryHoursImport +
+                ", " + SSprestationsOrIndemnizations +
+                ", \"" + indemnization1Name + '\"' +
+                ", \"" + indemnization2Name + '\"' +
+                ", \"" + indemnization3Name + '\"' +
+                ", " + indemnization1Import +
+                ", " + indemnization2Import +
+                ", " + indemnization3Import +
+                ", " + otherIndemnizations +
+                ", " + otherSalaryPerceptions +
+                "," + extraordinaryGratificationsImport +
+                ", " + especieSalaryImport +
+                ", " + majorForceExtraHoursImport +
+                ", " + majorForceExtraHoursDeduction +
+                ", " + otherExtraHoursDeduction +
+                ", " + otherExtraHoursImport +
+                ", " + irpfPercent +
+                ", " + totalAportations +
+                "," + anticipations +
+                ", " + especieProductsValue +
+                ", " + otherDeductions +
+                ", " + totalDeductions +
+                ", " + netSalary +
+                ", " + commonContingenciesPercent +
+                ", " + unemployementPercent +
+                ", " + professionalFormationPercent +
+                ", " + majorForceExtraHoursPercent +
+                ", " + otherExtraHoursPercent +
+
+                ", " + commonContingenciesDeduction +
+                ", " + unemployementDeduction +
+                ", " + professionalFormationDeduction +
+
+                ", " + irpfDeduction +
+                ", " + bruteSalary;
+
+
+    }
+
+
     @Override
     public String toString() {
         return "Payroll{" +

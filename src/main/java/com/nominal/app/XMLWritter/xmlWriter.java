@@ -1,12 +1,10 @@
 package com.nominal.app.XMLWritter;
 import com.nominal.app.DbConn;
-import com.nominal.app.queries.EmployeeQueries;
 import com.nominal.app.queries.PayrollQueries;
 import com.nominal.app.queries.Queries;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -29,8 +27,8 @@ public class xmlWriter extends Queries {
         return statement.executeQuery(sql);
     }
 
-    public static void main(String[] args) throws Exception {
-        String query = "SELECT * FROM payrolls";
+    public void writeXml(int payrollId) throws Exception {
+        String query = "select * from payrolls where id=" +payrollId;
         PayrollQueries payrollQueries = new PayrollQueries();
 
         ResultSet resultQuery = payrollQueries.retrieveOneRow(query);
@@ -114,14 +112,14 @@ public class xmlWriter extends Queries {
 
         // If the file doesn't exists, create and write to it
         // If the file exists, truncate (remove all content) and write to it
-        try (FileWriter writer = new FileWriter("employees.xml");
-             BufferedWriter bw = new BufferedWriter(writer)) {
+       FileWriter writer = new FileWriter("employees.xml");
+       BufferedWriter bw = new BufferedWriter(writer);
+        bw.write(content);
 
-            bw.write(content);
+    }
 
-        } catch (IOException e) {
-            System.err.format("IOException: %s%n", e);
-        }
+    public static void main(String[] args) throws Exception {
+
 
     }
 }

@@ -31,4 +31,8 @@ public class PayrollService extends PayrollRepo {
     public List<Payroll> findAllPayrolls() throws SQLException {
         return super.findAll("payrolls");
     }
+
+    public Payroll addPayroll(Payroll payroll) throws SQLException{
+        return super.addPayroll(payroll);
+    }
 }

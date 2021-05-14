@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "net.sf.jasperreports.export.csv.write.bom",
+      "type": "java.lang.String",
+      "description": "Description for net.sf.jasperreports.export.csv.write.bom."
+  }
+] }
