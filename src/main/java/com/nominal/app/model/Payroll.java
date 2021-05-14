@@ -623,4 +623,73 @@ public class Payroll {
     public void setBruteSalary(double bruteSalary) {
         this.bruteSalary = bruteSalary;
     }
+
+    @Override
+    public String toString() {
+        return "Payroll{" +
+                "id=" + id +
+                ", companyId=" + companyId +
+                ", companyName='" + companyName + '\'' +
+                ", companyAddress='" + companyAddress + '\'' +
+                ", city='" + city + '\'' +
+                ", cif='" + cif + '\'' +
+                ", ccc='" + ccc + '\'' +
+                ", employeeId=" + employeeId +
+                ", employeeName='" + employeeName + '\'' +
+                ", employeeSecondName='" + employeeSecondName + '\'' +
+                ", employeeLastName='" + employeeLastName + '\'' +
+                ", nif='" + nif + '\'' +
+                ", naf='" + naf + '\'' +
+                ", jobPosition='" + jobPosition + '\'' +
+                ", retributiveGroup=" + retributiveGroup +
+                ", establishmentCategory=" + establishmentCategory +
+                ", startDate=" + startDate +
+                ", endDate=" + endDate +
+                ", dateDiff=" + dateDiff +
+                ", baseSalary=" + baseSalary +
+                ", totalComplements=" + totalComplements +
+                ", complement1Name='" + complement1Name + '\'' +
+                ", complement2Name='" + complement2Name + '\'' +
+                ", complement3Name='" + complement3Name + '\'' +
+                ", complement1Import=" + complement1Import +
+                ", complement2Import=" + complement2Import +
+                ", complement3Import=" + complement3Import +
+                ", totalIndemnizations=" + totalIndemnizations +
+                ", majorForceExtraHoursImport=" + majorForceExtraHoursImport +
+                ", otherExtraHoursImport=" + otherExtraHoursImport +
+                ", complementaryHoursImport=" + complementaryHoursImport +
+                ", extraordinaryGratificationsImport=" + extraordinaryGratificationsImport +
+                ", especieSalaryImport=" + especieSalaryImport +
+                ", SSprestationsOrIndemnizations=" + SSprestationsOrIndemnizations +
+                ", otherIndemnizations=" + otherIndemnizations +
+                ", indemnization1Name='" + indemnization1Name + '\'' +
+                ", indemnization2Name='" + indemnization2Name + '\'' +
+                ", indemnization3Name='" + indemnization3Name + '\'' +
+                ", indemnization1Import=" + indemnization1Import +
+                ", indemnization2Import=" + indemnization2Import +
+                ", indemnization3Import=" + indemnization3Import +
+                ", otherSalaryPerceptions=" + otherSalaryPerceptions +
+                ", totalDeventions=" + totalDeventions +
+                ", totalNonSalarialPerceptions=" + totalNonSalarialPerceptions +
+                ", commonContingenciesPercent=" + commonContingenciesPercent +
+                ", unemployementPercent=" + unemployementPercent +
+                ", professionalFormationPercent=" + professionalFormationPercent +
+                ", majorForceExtraHoursPercent=" + majorForceExtraHoursPercent +
+                ", otherExtraHoursPercent=" + otherExtraHoursPercent +
+                ", irpfPercent=" + irpfPercent +
+                ", commonContingenciesDeduction=" + commonContingenciesDeduction +
+                ", unemployementDeduction=" + unemployementDeduction +
+                ", professionalFormationDeduction=" + professionalFormationDeduction +
+                ", majorForceExtraHoursDeduction=" + majorForceExtraHoursDeduction +
+                ", otherExtraHoursDeduction=" + otherExtraHoursDeduction +
+                ", irpfDeduction=" + irpfDeduction +
+                ", totalAportations=" + totalAportations +
+                ", anticipations=" + anticipations +
+                ", especieProductsValue=" + especieProductsValue +
+                ", otherDeductions=" + otherDeductions +
+                ", totalDeductions=" + totalDeductions +
+                ", netSalary=" + netSalary +
+                ", bruteSalary=" + bruteSalary +
+                '}';
+    }
 }

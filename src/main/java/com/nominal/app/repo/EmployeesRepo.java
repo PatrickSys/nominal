@@ -1,6 +1,5 @@
 package com.nominal.app.repo;
 
-import com.nominal.app.exceptions.NotFoundException;
 import com.nominal.app.model.Employee;
 import com.nominal.app.queries.EmployeeQueries;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,13 +56,14 @@ public abstract class EmployeesRepo extends Repo<Employee>{
 
     //Retrieves an employee given an id
     public Employee findEmployeeByID(int id ) throws Exception {
-        return super.findById("employees", "id",Integer.toString(id)).orElseThrow(() -> new NotFoundException("user by dni " + id + " was not found"));
+        return super.findById("employees", "id",Integer.toString(id));
     }
 
 
     //gets the employee retributive group given it's job position name, then adds the employee to our database
     public Employee addEmployee(Employee employee) throws Exception {
         employee.setRetributiveGroup(getRetributiveGroupByJobName(employee.getJobPosition()));
+
         return super.add(employee, "employees", "(dni, naf,  job_position, retributive_group, establishment_category, hire_date)", employee.toQueryInfo()  );
     }
 

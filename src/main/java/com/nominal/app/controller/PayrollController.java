@@ -1,7 +1,7 @@
 package com.nominal.app.controller;
 
-import com.nominal.app.model.Company;
-import com.nominal.app.service.CompanyService;
+import com.nominal.app.model.Payroll;
+import com.nominal.app.service.PayrollService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,31 +15,30 @@ import java.util.List;
 
 /************************************************************************
  Made by        Nominal team
- Date           12/05/2021
+ Date           14/05/2021
  Package        com.nominal.app.controller
  Description:
  ************************************************************************/
 @RestController
-@RequestMapping("/companies")
-public class CompanyController {
+@RequestMapping("/payrolls")
+public class PayrollController {
+
+    private PayrollService payrollService;
 
     @Autowired
-    private final CompanyService companyService;
-
-    public CompanyController(CompanyService companyService){
-        this.companyService = companyService;
+    public PayrollController(PayrollService payrollService){
+     this.payrollService = payrollService;
     }
 
     @GetMapping("/all")
-    public ResponseEntity<List<Company>> findAllCompanies() throws SQLException {
-        List<Company> companies = companyService.findAllCompanies();
-        return new ResponseEntity<>(companies, HttpStatus.OK);
+    public ResponseEntity<List<Payroll>> findAllPayrolls() throws SQLException {
+        List<Payroll> payrolls = payrollService.findAllPayrolls();
+        return new ResponseEntity<>(payrolls, HttpStatus.OK);
     }
 
-
-    @GetMapping("find/{id}")
-    public ResponseEntity<Company> findCompanyById(@PathVariable("id") String id){
-        Company company = new Company();
-        return new ResponseEntity<>(company, HttpStatus.OK);
+    @GetMapping("/find/{id}")
+    public ResponseEntity<?> findPayrollById(@PathVariable("id") int id) throws Throwable {
+        Payroll payroll = payrollService.findPayrollByID(id);
+        return new ResponseEntity<>(payroll, HttpStatus.OK);
     }
 }

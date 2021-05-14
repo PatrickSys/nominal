@@ -9,7 +9,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Optional;
 
 /************************************************************************
  Made by        PatrickSys
@@ -47,10 +46,11 @@ public abstract class Repo <T> extends Queries {
     /**
      * Queries the database given a table and a key to look for
      * then returns an optional of an object type
+     * @return
      */
-    protected Optional<T> findById(String tableName, String idName, String idValue) throws SQLException {
+    protected T findById(String tableName, String idName, String idValue) throws SQLException {
         String sql = "select * from " + tableName + " where " + idName + " = " + idValue;
-        return Optional.ofNullable(retrieveObjectFromQuery(sql));
+        return retrieveObjectFromQuery(sql);
     }
 
     /**

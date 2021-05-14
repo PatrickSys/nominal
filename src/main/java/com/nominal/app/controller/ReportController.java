@@ -1,15 +1,11 @@
 package com.nominal.app.controller;
 
 import com.nominal.app.service.ReportService;
-import net.sf.jasperreports.engine.JRException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.io.FileNotFoundException;
-import java.sql.SQLException;
 
 /************************************************************************ยบ
  Made by        Nominal Team
@@ -23,10 +19,12 @@ import java.sql.SQLException;
 public class ReportController {
 
     @Autowired
-    ReportService reportservice;
+    ReportService reportService;
 
     @GetMapping("/{format}/{id}")
     public String generateReport(@PathVariable String format, @PathVariable int id) throws Throwable {
-        return reportservice.exportReport(format, id);
+        return reportService.exportReport(format, id);
     }
+
+
 }

@@ -1,10 +1,10 @@
 package com.nominal.app.repo;
 
-import com.nominal.app.exceptions.NotFoundException;
 import com.nominal.app.model.Person;
 import com.nominal.app.queries.PersonQueries;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+
 import java.sql.SQLException;
 import java.util.List;
 
@@ -32,7 +32,7 @@ public abstract class PersonRepo extends Repo<Person> {
     public Person findPersonByDni(String dni ) throws Exception {
             dni = "\"" + dni + "\"";
         String finalDni = dni;
-        return super.findById("people", "dni",dni).orElseThrow(() -> new NotFoundException("user by dni " + finalDni + " was not found"));
+        return super.findById("people", "dni",dni);
     }
 
     public Person addPerson(Person person) throws SQLException {

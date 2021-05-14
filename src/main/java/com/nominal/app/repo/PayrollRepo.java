@@ -1,7 +1,8 @@
 package com.nominal.app.repo;
 
-import com.nominal.app.exceptions.NotFoundException;
 import com.nominal.app.model.Payroll;
+import com.nominal.app.queries.PayrollQueries;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 /************************************************************************ยบ
@@ -14,11 +15,17 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class PayrollRepo extends Repo<Payroll> {
 
-    protected PayrollRepo() throws Exception {
+    @Autowired
+    public PayrollQueries payrollQueries = new PayrollQueries();
+
+    @Autowired
+    public PayrollRepo() throws Exception {
+        super();
     }
 
     public Payroll findPayrollByID(int id ) throws Throwable {
-        return super.findById("payroll", "id",Integer.toString(id)).orElseThrow(() -> new NotFoundException("user by dni " + id + " was not found"));
+        String idValue = "" + id + "";
+        return super.findById("payrolls", "id", idValue);
     }
 
 }

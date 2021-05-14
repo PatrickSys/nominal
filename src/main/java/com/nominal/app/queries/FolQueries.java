@@ -21,8 +21,6 @@ public class FolQueries extends Queries {
     public static void main(String[] args) throws Exception {
         FolQueries FolQueries = new FolQueries();
         FolQueries.insertFolData();
-        List<List<String>> allRetrib = FolQueries.getAllRetributionGroups();
-        //FolQueries.insertRetributiveGroups(allRetrib);
 
     }
 
@@ -34,13 +32,13 @@ public class FolQueries extends Queries {
         List<List<String>> allEstablishmentCategories = getAllCategories();
         List<String> monthlyPayment = getMonthlyPayment();
 
-        //insertConvention();
-        //insertEstablishmentCategories();
-        //insertEstablishment_types(allEstablishmentCategories);
-        //insertRetributiveGroups(allRetributionGroups);
-        //insertJobPositions(allRetributionGroups);
-        //insertBaseSalaries( allEstablishmentCategories, allRetributionGroups);
-        //insertEstablishment_types(allEstablishmentCategories);
+        insertConvention();
+        insertEstablishmentCategories(allEstablishmentCategories);
+        insertEstablishment_types(allEstablishmentCategories);
+        insertRetributiveGroups(allRetributionGroups);
+        insertJobPositions(allRetributionGroups);
+        insertBaseSalaries( allEstablishmentCategories, allRetributionGroups);
+        insertEstablishment_types(allEstablishmentCategories);
 
 
 
@@ -102,8 +100,7 @@ public class FolQueries extends Queries {
         for(List<String> retributionGroup : allRetributionGroups){
                 String sql = "insert into retributive_groups VALUES ('" + index + "')";
 
-                //executeQuery(sql);
-            System.err.println(sql);
+                executeQuery(sql);
 
             index++;
         }
