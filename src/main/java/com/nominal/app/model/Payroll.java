@@ -55,6 +55,8 @@ public class Payroll {
     Date endDate;
     int dateDiff;
 
+
+
     /**
      * Devengos
      */
