@@ -34,8 +34,8 @@
 	<field name="indemnization2Name" class="java.lang.String"/>
 	<field name="indemnization3Name" class="java.lang.String"/>
 	<field name="indemnization1Import" class="java.lang.Double"/>
-	<field name="indemnization2import" class="java.lang.Double"/>
-	<field name="indemnization3import" class="java.lang.Double"/>
+	<field name="indemnization2Import" class="java.lang.Double"/>
+	<field name="indemnization3Import" class="java.lang.Double"/>
 	<variable name="startDay" class="java.lang.String">
 		<variableExpression><![CDATA[new SimpleDateFormat("dd").format($F{startDate})]]></variableExpression>
 	</variable>
@@ -527,11 +527,11 @@ Salario en especie..............................................................
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				</reportElement>
-				<textFieldExpression><![CDATA[$F{indemnization2import}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{indemnization2Import}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="389" y="360" width="32" height="14" uuid="6047c451-9628-4e45-bd5b-5ec612c8bafe"/>
-				<textFieldExpression><![CDATA[$F{indemnization3import}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{indemnization3Import}]]></textFieldExpression>
 			</textField>
 		</band>
 		<band height="557">
