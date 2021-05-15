@@ -17,7 +17,7 @@ import java.util.List;
  Made by        Nominal team
  Date           12/05/2021
  Package        com.nominal.app.controller
- Description:
+ Description:   The employee controller which receives calls from the front end
  ************************************************************************/
 @RestController
 @RequestMapping("/companies")
@@ -29,6 +29,7 @@ public class CompanyController {
     public CompanyController(CompanyService companyService){
         this.companyService = companyService;
     }
+
 
     @GetMapping("/all")
     public ResponseEntity<List<Company>> findAllCompanies() throws SQLException {

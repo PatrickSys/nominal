@@ -28,14 +28,4 @@ public class CompanyMapper implements Mapper<Company> {
         return company;
     }
 
-    /**
-     *
-     *
-     *  int id;
-     *     String CIF;
-     *     String companyName;
-     *     String companyAddress;
-     *     String city;
-     *     String CCC;
-     */
 }

@@ -39,21 +39,6 @@ CREATE TABLE IF NOT EXISTS employees
 drop table payrolls;
 
 
-/*INSERT INTO payrolls (company_id, cif, company_name,company_address, city, ccc, employee_id, employee_name, employee_second_name,
-                employee_last_name, nif, naf, job_position,retributive_group, establishment_category,start_date, end_date, datediff, complement_1_name,
-                      complement_2_name, complement_3_name, complement_1_import, complement_2_import, complement_3_import, complementary_hours_import,
-                      ss_prestations_or_indemnizations, indemnization_1_name, indemnization_2_name, indemnization_3_name, indemnization_1_import,
-                      indemnization_1_import, indemnization_2_import, indemnization_3_import, other_indemnizations, other_salary_perceptions,
-                      extraordinary_gratifications_import, especie_salary_import, major_force_extra_hours_import, major_force_extra_hours_deduction,
-                      other_extra_hours_deduction, other_extra_hours_import, total_aportations, anticipations, especie_products_value,
-                      other_deductions, total_deductions, net_salary, common_contingencies_percent, unemployement_percent, professional_formation_percent,
-                      major_force_extra_hours_percent, other_extra_hours_percent, irpf_percent, common_contingencies_deduction,
-                      unemployement_deduction, professional_formation_deduction, other_extra_hours_deduction, irpf_deduction, brute_salary);
-*/
-
-
-
-
 CREATE TABLE IF NOT EXISTS people(
         nif CHAR(9) PRIMARY KEY NOT NULL,
         yob YEAR NOT NULL,
@@ -168,9 +153,6 @@ CREATE TABLE IF NOT EXISTS payrolls
     irpf_deduction double,
     brute_salary double
 );
-
-
-drop table  payrolls;
 
 
 

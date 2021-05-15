@@ -1,5 +1,4 @@
 package com.nominal.app.XMLWritter;
-import com.nominal.app.DbConn;
 import com.nominal.app.queries.PayrollQueries;
 import com.nominal.app.queries.Queries;
 
@@ -16,18 +15,17 @@ import java.sql.Statement;
  Description:
  ************************************************************************/
 
-public class xmlWriter extends Queries {
+public class XmlWriter extends Queries {
 
-    protected final DbConn connection = new DbConn();
 
-    public xmlWriter() throws Exception {
+    public XmlWriter() throws Exception {
     }
     public ResultSet executeQuery(String sql) throws SQLException {
         Statement statement = connection.createStatement();
         return statement.executeQuery(sql);
     }
 
-    public void writeXml(int payrollId) throws Exception {
+    public void writeXml(int payrollId, String path) throws Exception {
         String query = "select * from payrolls where id=" +payrollId;
         PayrollQueries payrollQueries = new PayrollQueries();
 
@@ -110,11 +108,12 @@ public class xmlWriter extends Queries {
                         "</Payroll>"
                 ;
 
-        // If the file doesn't exists, create and write to it
-        // If the file exists, truncate (remove all content) and write to it
-       FileWriter writer = new FileWriter("employees.xml");
+
+       FileWriter writer = new FileWriter(path);
        BufferedWriter bw = new BufferedWriter(writer);
         bw.write(content);
+        bw.flush();
+        bw.close();
 
     }
 

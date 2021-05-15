@@ -16,7 +16,7 @@ import java.util.List;
  Made by        Nominal team
  Date           14/05/2021
  Package        com.nominal.app.controller
- Description:
+ Description:   The payroll Controller receives calls from the front end service
  ************************************************************************/
 @RestController
 @RequestMapping("/payrolls")
@@ -29,6 +29,7 @@ public class PayrollController {
      this.payrollService = payrollService;
     }
 
+    // returns all the payrolls received from the database
     @GetMapping("/all")
     public ResponseEntity<List<Payroll>> findAllPayrolls() throws SQLException {
         List<Payroll> payrolls = payrollService.findAllPayrolls();
@@ -45,13 +46,8 @@ public class PayrollController {
     public ResponseEntity<Integer> addPayroll(@RequestBody String jsonObj) throws Exception {
 
         Gson gson =  new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
-
         Payroll payroll = gson.fromJson(jsonObj, Payroll.class);
-
         Payroll addedPayroll = payrollService.addPayroll(payroll);
-        System.err.println(addedPayroll.getId());
-
-
         return new ResponseEntity<>(addedPayroll.getId(), HttpStatus.CREATED);
     }
 }

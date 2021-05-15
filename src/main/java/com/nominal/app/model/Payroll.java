@@ -6,13 +6,8 @@ import javax.persistence.Table;
 import java.sql.Date;
 
 /************************************************************************
- Made by        Nominal team
- Date           12/05/2021
-=======
-/************************************************************************ยบ
  Made by        Nominal Team
  Date           10/05/2021
->>>>>>> a490de6844af0092508ad15539647d47c244dfd9
  Package        com.nominal.app.model
  Description:
  ************************************************************************/
@@ -48,9 +43,7 @@ public class Payroll {
     char establishmentCategory;
 
 
-    public Payroll(int id) {
-        this.id = id;
-    }
+
 
     public Payroll() {
 

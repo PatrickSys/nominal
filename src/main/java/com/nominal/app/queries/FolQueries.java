@@ -10,7 +10,7 @@ import java.util.List;
  Made by        Nominal team
  Date           08/05/2021
  Package        com.nominal.app
- Description:
+ Description:   Use these methods to insert the data about companies, the convention, and so on
  ************************************************************************/
 public class FolQueries extends Queries {
 

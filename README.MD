@@ -29,8 +29,12 @@ How to be able run our project step by step.
    and download the version we previosly mentioned. Once NodeJS is installed, open the terminal/cmd and install Angular with this command ``` npm install -g @angular/cli ```
 
 3. Next step is clone our project nominal and [NominalWeb](https://github.com/LMatass/nominalWeb), once you have it,
+   you'll need to install two modules on the web project, execute these commands:```npm i @angular/common```and ```npm i @angular/core```
    go to the nominal/src/main/java/DbConn and modify the IP, username and password if needed ().
 
-4. Now you need to install JasperReports library, to do that go to [JasperReports Downloads](https://community.jaspersoft.com/community-download) and downlaod ```jasperreports-6.17.0.jar```, once Is downloaded add the library to the nominal project you just cloned in the step 3.
+4. Now you need to install JasperReports library, to do that go to [JasperReports Downloads](https://community.jaspersoft.com/community-download) 
+   and downlaod ```jasperreports-6.17.0.jar```, once it's downloaded add the library to the nominal project you just cloned in the step 3.
+   You'll also need for this part the Gson library, download it on https://search.maven.org/artifact/com.google.code.gson/gson/2.8.6/jar
 
-5. Finally run the Nominal project  AppApplication class in your IDE and with the terminal/cmd redirect to the folder where is located nominalWeb and execute ```ng serve```, Angular should start and you are good to test the website in ```http://localhost:4200/```
+5. Finally run the Nominal project  AppApplication class in your IDE and with the terminal/cmd redirect to the folder where is located nominalWeb and execute ```ng serve```, 
+   Angular should start and you are good to test the website in ```http://localhost:4200/```

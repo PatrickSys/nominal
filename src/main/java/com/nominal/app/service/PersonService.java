@@ -36,7 +36,6 @@ public class PersonService extends PersonRepo {
 
 
     @Override
-    //TODO Return  exception if not found!!
     public Person findPersonByDni(String dni) throws Exception {
         return super.findPersonByDni(dni);
     }
