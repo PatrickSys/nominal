@@ -12,4 +12,10 @@ public class Regex {
         String objectValues = object.toString();
         return objectValues.replaceAll("[{}]", " ").replace(object.getClass().getSimpleName(), "");
     }
+
+
+    public static void main(String[] args) {
+
+
+    }
 }

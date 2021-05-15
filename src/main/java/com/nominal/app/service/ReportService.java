@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.ResourceUtils;
 
 import java.io.File;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -32,9 +34,9 @@ public class ReportService {
     }
 
     public String exportReport(String report, int id) throws Throwable {
+        String reportPath = "";
         List<Payroll> payroll = new LinkedList<>();
         Payroll payroll1 = this.payrollRepo.findPayrollByID(id);
-        System.err.println(payroll1.toString());
         payroll.add(payrollRepo.findPayrollByID(id));
 
         //Load file and compile
@@ -44,15 +46,21 @@ public class ReportService {
         Map<String,Object> m = new HashMap<>();
         m.put("NominalTeam","LRP");
         JasperPrint jp = JasperFillManager.fillReport(jr,m,dataSource);
+        String thisReport = "src\\out\\reports\\" + id +".";
+
+        Path current = Paths.get(thisReport);
+
+        String outPath = current.toAbsolutePath().toString();
 
         if (report.equalsIgnoreCase("html")){
-            JasperExportManager.exportReportToHtmlFile(jp,"src\\main\\resources"+"\\report.html");
+            reportPath = outPath +"html";
+            JasperExportManager.exportReportToHtmlFile(jp,reportPath);
+
         }else if (report.equalsIgnoreCase("pdf")){
-            JasperExportManager.exportReportToPdfFile(jp,"src\\main\\resources"+"\\report.pdf");
+            reportPath = outPath +"pdf";
+            JasperExportManager.exportReportToPdfFile(jp,reportPath);
         }
-        else if(report.equalsIgnoreCase("csv")){
-            JasperExportManager.exportReportToPdfFile(jp,"src\\main\\resources"+"\\report.csv");
-        }
-        return "Report saved in src\\main\\resources";
+
+        return  "Report guardado en " + reportPath;
     }
 }

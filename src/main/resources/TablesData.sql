@@ -148,7 +148,7 @@ CREATE TABLE IF NOT EXISTS payrolls
     especie_salary_import double,
     major_force_extra_hours_import double,
 	major_force_extra_hours_deduction double,
-	other_extra_hours_deductions double,
+	other_extra_hours_deduction double,
     other_extra_hours_import  double,
 	total_aportations double,
 	anticipations double,
@@ -165,10 +165,12 @@ CREATE TABLE IF NOT EXISTS payrolls
     common_contingencies_deduction double,
     unemployement_deduction double,
     professional_formation_deduction double,
-    other_extra_hours_deduction double,
     irpf_deduction double,
     brute_salary double
 );
+
+
+drop table  payrolls;
 
 
 

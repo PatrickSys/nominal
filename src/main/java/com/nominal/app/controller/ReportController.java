@@ -24,6 +24,7 @@ public class ReportController {
 
     @GetMapping("/{format}/{id}")
     public String generateReport(@PathVariable String format, @PathVariable int id) throws Throwable {
+
         return reportService.exportReport(format, id);
     }
 

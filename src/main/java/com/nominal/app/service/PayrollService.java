@@ -5,6 +5,7 @@ import com.nominal.app.repo.PayrollRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -32,7 +33,12 @@ public class PayrollService extends PayrollRepo {
         return super.findAll("payrolls");
     }
 
-    public Payroll addPayroll(Payroll payroll) throws SQLException{
-        return super.addPayroll(payroll);
+    public Payroll addPayroll(Payroll payroll) throws Exception {
+
+        super.addPayroll(payroll);
+    ResultSet resultSet = retrieveOneRow("select id from payrolls where start_date = \""+ payroll.getStartDate() + "\" and end_date =\"" +  payroll.getEndDate() + "\" and employee_id = " + payroll.getEmployeeId());
+    int id = resultSet.getInt("id");
+    payroll.setId(id);
+    return super.payrollQueries.payrollFromQuery(id);
     }
 }

@@ -4,7 +4,6 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.nominal.app.model.Payroll;
 import com.nominal.app.service.PayrollService;
-import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,7 +22,7 @@ import java.util.List;
 @RequestMapping("/payrolls")
 public class PayrollController {
 
-    private PayrollService payrollService;
+    private final PayrollService payrollService;
 
     @Autowired
     public PayrollController(PayrollService payrollService){
@@ -43,13 +42,16 @@ public class PayrollController {
     }
 
     @PostMapping("/add")
-    public ResponseEntity<Payroll> addPayroll(@RequestBody String jsonObj) throws SQLException, JSONException {
+    public ResponseEntity<Integer> addPayroll(@RequestBody String jsonObj) throws Exception {
 
         Gson gson =  new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
 
         Payroll payroll = gson.fromJson(jsonObj, Payroll.class);
 
         Payroll addedPayroll = payrollService.addPayroll(payroll);
-        return new ResponseEntity<>(addedPayroll, HttpStatus.CREATED);
+        System.err.println(addedPayroll.getId());
+
+
+        return new ResponseEntity<>(addedPayroll.getId(), HttpStatus.CREATED);
     }
 }

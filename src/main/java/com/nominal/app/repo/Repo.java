@@ -59,7 +59,6 @@ public abstract class Repo <T> extends Queries {
      */
     protected T add(T t, String tableName, String tableRows, String values) throws SQLException {
         String add = "insert into " + tableName + tableRows + " values (" + values + ")";
-        System.err.println(add);
         super.executeQuery(add);
         return t;
     }

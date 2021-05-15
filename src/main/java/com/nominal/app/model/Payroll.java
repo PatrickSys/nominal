@@ -681,7 +681,6 @@ public class Payroll {
                 ", " + majorForceExtraHoursDeduction +
                 ", " + otherExtraHoursDeduction +
                 ", " + otherExtraHoursImport +
-                ", " + irpfPercent +
                 ", " + totalAportations +
                 "," + anticipations +
                 ", " + especieProductsValue +
@@ -693,6 +692,7 @@ public class Payroll {
                 ", " + professionalFormationPercent +
                 ", " + majorForceExtraHoursPercent +
                 ", " + otherExtraHoursPercent +
+                ", " + irpfPercent +
 
                 ", " + commonContingenciesDeduction +
                 ", " + unemployementDeduction +

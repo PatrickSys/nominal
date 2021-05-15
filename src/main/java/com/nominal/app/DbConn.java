@@ -17,6 +17,10 @@ import java.sql.Statement;
 @Component
 public class DbConn {
 
+
+    public static void main(String[] args) {
+
+    }
     Connection connection;
 
     public DbConn() throws Exception{
@@ -32,4 +36,11 @@ public class DbConn {
     public Statement createStatement() throws SQLException {
         return connection.createStatement();
     }
+
+
+
+
+
+
+
 }

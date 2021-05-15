@@ -32,6 +32,7 @@ public class PersonController {
     @GetMapping("/all")
     public ResponseEntity<List<Person>> getAllPeople() throws SQLException {
         List<Person> people = personService.getAllPeople();
+
         return new ResponseEntity<>(people, HttpStatus.OK);
     }
 

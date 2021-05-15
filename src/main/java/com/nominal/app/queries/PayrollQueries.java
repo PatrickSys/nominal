@@ -27,7 +27,7 @@ public class PayrollQueries extends Queries{
 
         public Payroll payrollFromQuery(int id) throws Exception {
             Payroll payroll = new Payroll(id);
-            String sql = "SELECT * FROM companies WHERE id = " + id;
+            String sql = "SELECT * FROM payrolls WHERE id = " + id;
             System.err.println(sql);
             ResultSet resultSet;
             resultSet = executeQuery(sql);
@@ -35,6 +35,7 @@ public class PayrollQueries extends Queries{
             if (resultSet.next()) {
                 payroll = payrollmapper.mapRow(resultSet);
             }
+            System.err.println(payroll.toString());
             return payroll;
 
         }
