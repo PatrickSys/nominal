@@ -32,7 +32,7 @@ How to be able run our project step by step.
    you'll need to install two modules on the web project, execute these commands:```npm i @angular/common```and ```npm i @angular/core```
    go to the nominal/src/main/java/DbConn and modify the IP, username and password if needed ().
 
-4. Now you need to install JasperReports library, to do that go to [JasperReports Downloads](https://community.jaspersoft.com/community-download) 
+4. Now you need to install JasperReports library, to do that go to [JasperReports Downloads] https://community.jaspersoft.com/project/jasperreports-library/releases
    and downlaod ```jasperreports-6.17.0.jar```, once it's downloaded add the library to the nominal project you just cloned in the step 3.
    You'll also need for this part the Gson library, download it on https://search.maven.org/artifact/com.google.code.gson/gson/2.8.6/jar
 
