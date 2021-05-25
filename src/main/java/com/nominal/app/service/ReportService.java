@@ -14,6 +14,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.ResourceUtils;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashMap;
@@ -62,6 +65,7 @@ public class ReportService {
         m.put("NominalTeam","LRP");
         JasperPrint jp = JasperFillManager.fillReport(jr,m,dataSource);
 
+        OutputStream outputStream = new FileOutputStream("test.pdf");
 
         //the xml output
         xmlConverter.writeXml(id, xmlPath);
@@ -69,10 +73,9 @@ public class ReportService {
         if (report.equalsIgnoreCase("html")){
             reportPath = outPath +"html";
             JasperExportManager.exportReportToHtmlFile(jp,reportPath);
-
         }else if (report.equalsIgnoreCase("pdf")){
             reportPath = outPath +"pdf";
-            JasperExportManager.exportReportToPdfFile(jp,reportPath);
+            JasperExportManager.exportReportToPdfStream(jp, outputStream);
         }
         else if (report.equalsIgnoreCase("csv")){
             reportPath = outPath + "csv";
