@@ -36,8 +36,8 @@ public class PersonService extends PersonRepo {
 
 
     @Override
-    public Person findPersonByDni(String dni) throws Exception {
-        return super.findPersonByDni(dni);
+    public Person findPersonByNif(String nif) throws Exception {
+        return super.findPersonByNif(nif);
     }
 
     @Override
@@ -50,8 +50,8 @@ public class PersonService extends PersonRepo {
         return super.updatePerson(person);
     }
 
-    public void deletePersonByDni(String dni) throws Exception {
-        super.deletePerson(super.personQueries.personFromQuery(dni));
+    public void deletePersonByNif(String nif) throws Exception {
+        super.deletePerson(super.personQueries.personFromQuery(nif));
 
     }
 

@@ -30,13 +30,13 @@ public class PersonQueries extends Queries {
 
     /**
      * Creates a person object by mapping a resultset
-     * @param dni the required person's dni
+     * @param nif the required person's nif
      * @return the object
      * @throws SQLException raw sql ex
      */
-    public Person personFromQuery(String dni) throws Exception {
+    public Person personFromQuery(String nif) throws Exception {
         Person person = new Person();
-        String sql = "select * from people where dni = \"" + dni +"\"";
+        String sql = "select * from people where nif = \"" + nif +"\"";
         ResultSet resultSet = executeQuery(sql);
 
         if (resultSet.next()){

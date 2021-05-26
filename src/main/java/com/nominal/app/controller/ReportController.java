@@ -19,9 +19,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class ReportController {
 
 
-    @Autowired
     ReportService reportService;
 
+    @Autowired
+    public ReportController(ReportService reportService){
+        this.reportService = reportService;
+    }
     @GetMapping("/{format}/{id}")
     public String generateReport(@PathVariable String format, @PathVariable int id) throws Throwable {
 

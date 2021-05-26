@@ -18,7 +18,7 @@ public class   Person implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, updatable = false)
-    private String dni;
+    private String nif;
     private int yob;
     private String name;
     private String secondName;
@@ -29,8 +29,8 @@ public class   Person implements Serializable {
     }
 
 
-    public Person(String dni, int yob, String name, String secondName, String lastName, int phone, String email) {
-        this.dni = dni;
+    public Person(String nif, int yob, String name, String secondName, String lastName, int phone, String email) {
+        this.nif = nif;
         this.yob = yob;
         this.name = name;
         this.secondName = secondName;
@@ -41,12 +41,12 @@ public class   Person implements Serializable {
 
 
 
-    public String getDni() {
-        return dni;
+    public String getNif() {
+        return nif;
     }
 
-    public void setDni(String dni) {
-        this.dni = dni;
+    public void setNif(String dni) {
+        this.nif = dni;
     }
 
     public int getYob() {
@@ -100,7 +100,7 @@ public class   Person implements Serializable {
     @Override
     public String toString() {
         return "Person{" +
-                "dni='" + dni + '\'' +
+                "dni='" + nif + '\'' +
                 ", yob=" + yob +
                 ", name='" + name + '\'' +
                 ", second_name='" + secondName + '\'' +
@@ -113,7 +113,7 @@ public class   Person implements Serializable {
     // gets info from a Person to be used in a query
     public String toQueryInfo(){
 
-        return "\"" + dni + "\"," +
+        return "\"" + nif + "\"," +
                  yob + " ,\"" +
                  name + "\",\"" +
                  secondName + "\", \"" +

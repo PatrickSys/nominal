@@ -498,7 +498,7 @@ Salario en especie..............................................................
 				<textFieldExpression><![CDATA[$F{complement1Name}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="44" y="198" width="220" height="22" uuid="8d75b8dd-d773-4946-8aa1-d55e46e61250">
+				<reportElement x="44" y="198" width="220" height="22" >
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<textElement>
@@ -507,7 +507,7 @@ Salario en especie..............................................................
 				<textFieldExpression><![CDATA[$F{complement2Name}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="44" y="210" width="220" height="20" uuid="3dba1b7a-17fc-4b62-89e0-10f2abcb1161"/>
+				<reportElement x="44" y="210" width="220" height="20"/>
 				<textFieldExpression><![CDATA[$F{complement3Name}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">

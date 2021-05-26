@@ -31,7 +31,7 @@ public abstract class Repo <T> extends Queries {
      * by iterating a resultset
      * then mapping with the given map type
      */
-    protected List<T> findAll(String table) throws SQLException {
+    protected List<T>   findAll(String table) throws SQLException {
         String sql = "select * from " + table;
         LinkedList<T> list = new LinkedList<>();
         ResultSet result = super.executeQuery(sql);

@@ -37,7 +37,7 @@ public class EmployeeService extends EmployeesRepo {
     public Employee addEmployee(Employee employee) throws Exception {
 
         super.addEmployee(employee);
-        String id = executeQuery("select id from employees where dni =\"" + employee.getNif()) + "\"";
+        String id = executeQuery("select id from employees where nif =\"" + employee.getNif()) + "\"";
         return super.EmployeeQueries.employeesFromQuery(Integer.parseInt(id));
     }
 

@@ -21,7 +21,7 @@ public class PersonMapper implements Mapper<Person> {
 
             if (null != resultSet) {
                 Person person = new Person();
-                person.setDni(resultSet.getString("dni"));
+                person.setNif(resultSet.getString("nif"));
                 person.setYob(resultSet.getInt("yob"));
                 person.setName(resultSet.getString("name"));
                 person.setSecondName(resultSet.getString("second_name"));

@@ -29,10 +29,9 @@ public abstract class PersonRepo extends Repo<Person> {
         return super.findAll("people");
     }
 
-    public Person findPersonByDni(String dni ) throws Exception {
-            dni = "\"" + dni + "\"";
-        String finalDni = dni;
-        return super.findById("people", "dni",dni);
+    public Person findPersonByNif(String nif ) throws Exception {
+            nif = "\"" + nif + "\"";
+        return super.findById("people", "dni",nif);
     }
 
     public Person addPerson(Person person) throws SQLException {
@@ -40,11 +39,11 @@ public abstract class PersonRepo extends Repo<Person> {
     }
 
     public Person updatePerson(Person person) throws SQLException{
-        return super.update(person, "people", "dni", person.getDni());
+        return super.update(person, "people", "nif", person.getNif());
     }
 
     public void deletePerson(Person person) throws  SQLException{
-        String personDni = "\"" + person.getDni() + "\"";
-        super.delete("people", "dni", personDni );
+        String personDni = "\"" + person.getNif() + "\"";
+        super.delete("people", "nif", personDni );
     }
 }

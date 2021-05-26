@@ -37,8 +37,8 @@ public class PersonController {
     }
 
     @GetMapping("/find/{dni}")
-    public ResponseEntity<?> getPersonByDni (@PathVariable("dni") String dni) throws Exception {
-        Person person = personService.findPersonByDni(dni);
+    public ResponseEntity<?> getPersonByDni (@PathVariable("dni") String nif) throws Exception {
+        Person person = personService.findPersonByNif(nif);
         return new ResponseEntity<>(person, HttpStatus.OK);
     }
 
@@ -56,8 +56,8 @@ public class PersonController {
     }
 
     @DeleteMapping("/delete/{dni}")
-    public ResponseEntity<?> deletePerson(@PathVariable("dni") String dni) throws Exception {
-        personService.deletePersonByDni(dni);
+    public ResponseEntity<?> deletePerson(@PathVariable("dni") String nif) throws Exception {
+        personService.deletePersonByNif(nif);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
