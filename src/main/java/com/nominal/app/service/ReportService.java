@@ -10,8 +10,13 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-
 import java.io.InputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -67,6 +72,7 @@ public class ReportService {
         String reportPath = ServletUriComponentsBuilder.fromCurrentContextPath().path("files/download/").path(thisReport).toUriString();
 
         System.out.println(reportPath);
+        OutputStream outputStream = new FileOutputStream("test.pdf");
 
         //the xml output
         //xmlConverter.writeXml(id, xmlPath);
@@ -76,8 +82,9 @@ public class ReportService {
             JasperExportManager.exportReportToHtmlFile(jp,reportPath);
 
         }/*else if (report.equalsIgnoreCase("pdf")){
+        }else if (report.equalsIgnoreCase("pdf")){
             reportPath = outPath +"pdf";
-            JasperExportManager.exportReportToPdfFile(jp,reportPath);
+            JasperExportManager.exportReportToPdfStream(jp, outputStream);
         }
         else if (report.equalsIgnoreCase("csv")){
             reportPath = outPath + "csv";
