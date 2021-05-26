@@ -36,7 +36,7 @@ public abstract class PersonRepo extends Repo<Person> {
     }
 
     public Person addPerson(Person person) throws SQLException {
-        return super.add(person, "people", "(dni, yob, name, second_name, last_name, phone, email)", person.toQueryInfo() );
+        return super.add(person, "people", "(nif, yob, name, second_name, last_name, phone, email)", person.toQueryInfo() );
     }
 
     public Person updatePerson(Person person) throws SQLException{
